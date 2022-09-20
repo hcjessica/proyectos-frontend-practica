@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My personal card</title>
+    <style>
+        html{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url("https://www.kibrispdr.org/data/906/web-developer-wallpaper-13.jpg");
+        }
+        section{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .card{
+            width: 360px;
+            height: 539px;
+            background: rgb(255, 255, 255);
+            border-radius: 25px;
+            overflow: hidden;
+            margin: 2rem 0 0 2rem;
+            border-style: groove;
+        }
+        /*Parte superior de la tarjeta*/
+        div.banner-container{
+            width: 100%;
+            height: 250px;
+            background-color: orangered;
+            position: relative;
+        }
+        .banner-container p{
+            right: 10px;
+            bottom: 0;
+            position: absolute;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        img.banner-img{
+            width: 100%;
+            height: 200px;
+        }
+        /*Imagen de perfil y bandera de nacionalidad*/
+        div.profile-picture-container{
+            position: absolute;
+            bottom: -2px;
+            left: 14px;
+        }
+        img.profilepicture-img{
+            width: 100px;
+            height: 100px;
+            border-radius: 56px;
+            border: rgb(255, 255, 255) 5px solid;
+        }
+        img.flag-img{
+            width: 30px;
+            height: 30px;
+            border-radius: 60px;
+            position: absolute;
+            bottom: 6px;
+            right: 0;
+            border: rgb(255, 255, 255) 1px solid;
+        }
+        /*Parte intermedia de la tarjeta*/
+        p.especialist{
+            font-weight: bold;
+        }
+        img.location-icon-img{
+            width: 23px;
+            height: 23px;
+            vertical-align: middle;
+            margin-right: 3px;
+        }
+        p.description{
+            text-align: justify;
+            padding: 0 15px;
+        }
+        p{
+            color: black;
+            text-align: center;
+            font-size: 1rem;
+            font-family: 'Lucida Sans', sans-serif;
+        }
+        /*Parte de los botones de la tarjeta*/
+        div.botones-container{
+            display: flex;
+            width: 100%;
+            background-color: rgb(62 32 229);
+        }
+        div.botones-container p{
+            width:100%;
+            border: 0.1rem solid rgb(0 0 0 / 36%);
+            margin: 0;
+            padding: 15px;
+            color: white;
+        }
+        div.botones-container p:hover{
+            cursor: pointer;
+            background-color: white;
+            color: black;
+        }
+        /*Parte inferior de la tarjeta*/
+        div.socialmedia-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: black;
+            padding: 15px 0;
+            align-items: center;
+        }
+        img.red-social-img{
+            width: 28px;
+            height: 28px;
+            border-radius: 10px;
+            margin: 0 7px;
+            background-color: white;
+        }
+        img.red-social-img:hover{
+            cursor: pointer;
+        }
+        p.username{
+            margin: 0;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="card">
+            <div class="banner-container">
+                <img class="banner-img" src="https://www.flowingcode.com/wp-content/uploads/2020/01/java.developer-smaller-604x270.jpg" alt="Banner">
+                <div class="profile-picture-container">
+                    <img class="profilepicture-img" src="https://scontent.flim13-1.fna.fbcdn.net/v/t39.30808-6/278576223_3183566835230946_8968506416249096014_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=9k25auipigcAX9-vhbm&_nc_ht=scontent.flim13-1.fna&oh=00_AT8naZsgJnP8mP0yt4KoE2sVyu-dNunKipk1v_zJAar4qg&oe=632DF69D" alt="Profile Picture">
+                    <img class="flag-img" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peru_bandera.png" alt="Flag">
+                </div>
+                <p>Jessica Huancollo Chambi</p>
+            </div>
+            <p class="especialist">Software Developer</p>
+            <p class="location"><img src="https://cdn-icons-png.flaticon.com/512/4781/4781517.png" alt="location-icon" class="location-icon-img">Lima, Peru</p>
+            <p class="description">With more 4 years of experience. Now, I'm focusing in frontend 😃. I like to create content about technology on social media. </p>
+            <div class="botones-container">
+                <p>Seguir</p>
+                <p>Mensaje</p>
+            </div>
+            <div class="socialmedia-container">
+                <img class="red-social-img" src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook Icon">
+                <img class="red-social-img" src="https://cdn-icons-png.flaticon.com/512/124/124021.png?w=360" alt="Twitter Icon">
+                <img class="red-social-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/640px-Instagram-Icon.png" alt="Instagram Icon">
+                <p class="username">@hcjessica31</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
