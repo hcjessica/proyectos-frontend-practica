@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Edit Account</title>
+    <style>
+        :root{
+            --white: #fff;
+            --black: #000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #acd982;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+            --font-family:'Quicksand', sans-serif;
+        }
+        body{
+            margin: 0;
+            font-family: var(--font-family);/*Solo aplica a los textos que no son botones o inputs*/
+        }
+        .login{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;/*centra los items*/
+        }
+        .form-container{
+            display: grid;
+            grid-template-rows: auto 1fr  auto;
+            width: 300px;
+        }
+        .title{
+            font-size: var(--lg);
+            margin-bottom: 36px;
+            text-align: start;/*Posicionando el texto a la izquierda*/
+        }
+        .form{/*No afecta los input*/
+            display: flex;
+            flex-direction: column;
+        }
+        .form div{/*x c/contenedor se setearía el display*/
+            display: flex;
+            flex-direction: column;
+        }
+        .label{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .value{
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            margin: 8px 0 32px 0;
+        }
+        .secondary-button{
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+            font-family: var(--font-family);
+        }
+        .login-button{
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 640px){
+            /*Cuando es móvil los bloques de form se separan dejando un espacio en el medio*/
+            .form-container{
+                height: 100%;
+            }
+            .form{       
+                height: 100%;         
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <h1 class="title">My account</h1>
+            <form action="/" class="form">
+                <div>
+                    <label for="name" class="label">Name</label>
+                    <p class="value">Camilo Yokoo</p>
+                    <label for="email" class="label">Email address</label>
+                    <p class="value">camilayokoo@gmail.com</p>
+                    <label for="password" class="label">Password</label>
+                    <p class="value">**********</p>
+                </div>
+                <div>
+                    <input type="submit" value="Edit" class="secondary-button login-button">                    
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
