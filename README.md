@@ -1,14 +1,14 @@
-##Frontend projects 
+## **Frontend projects** 
 
 Final products I got from practicing as a frontend developer.
 
-#1. Profile card
+# 1. Profile card
 
 A short summary about me in a presentation card applying position, display, etc.
 
 ![Project 1](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project1-1.png)
 
-#2. Yard sale
+# 2. Yard sale
 
 Some user interfaces about yard sale applying flexbox and css grid. Interfaces designed for web and mobile devices.
 
