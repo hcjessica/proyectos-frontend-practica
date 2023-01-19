@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtener tipo de dato</title>
+    <style>
+        :root{
+            --primary-color: #1d02ff;
+            --second-color: white;
+            --font-family: 'Verdana', sans-serif;
+            --sm: 16px;
+            --md: 20px;
+            --lg: 45px;
+        }
+        p{
+            font-size: var(--md);       
+            font-weight: bolder;     
+        }
+        div.container-arreglo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        hr{
+            margin: 30px 0;
+        }
+        div.container-arreglo > p, p.funciones{
+            font-size: var(--sm); 
+            font-weight: unset;    
+        }
+        p.funciones::before{
+            content: "📌 ";
+        }
+        input{
+            height: 40px;
+            width: 305px;
+            margin-left: 5px;
+            font-size: var(--md);  
+        }
+        .btn{
+            width: 140px;
+            height: 45px;
+            margin-left: 5px;
+            background-color: var(--primary-color);
+            color: var(--second-color);
+            font-weight: bold;
+            font-size: var(--sm);
+            text-transform: uppercase;
+            border: unset;
+            cursor: pointer;
+        }        
+        .btn, p{
+            font-family: var(--font-family);
+        }
+        p.resultado{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>Funciones de un arreglo</p>
+    <div class="container-arreglo">
+        <p>Ingrese arreglo A: [2, 9, 8, 7, 10, 5]</p>       
+    </div>
+    <div class="container-arreglo">
+        <p>Ingrese arreglo B: [20, 11, 6, 3, 4, 12]</p>
+    </div>
+    <hr>
+
+    <p class="funciones">Usando <strong>push</strong>: Agrega elementos al final del arreglo (Arreglo A).</p>
+    <div class="container-arreglo">
+        <p>Ingrese valor: </p>
+        <input type="text" id="txt-valorpush"/>
+        <button class="btn" onclick="push();">Agregar</button>
+    </div>    
+    <p id="resultado-push" class="resultado"></p>
+
+    <p class="funciones">Usando <strong>pop</strong>: Elimina elementos del final del arreglo hacia adelante (Arreglo A).</p>
+    <div class="container-arreglo">
+        <button class="btn" onclick="pop();">Eliminar</button>
+    </div>    
+    <p id="resultado-pop" class="resultado"></p>
+
+    <p class="funciones">Usando <strong>unshift</strong>: Agrega elementos al principio del arreglo (Arreglo B).</p>
+    <div class="container-arreglo">
+        <p>Ingrese valor: </p>
+        <input type="text" id="txt-valorunshift"/>
+        <button class="btn" onclick="unshift();">Agregar</button>
+    </div>    
+    <p id="resultado-unshift" class="resultado"></p>
+
+    <p class="funciones">Usando <strong>shift</strong>: Elimina elementos del principio del arreglo hacia el final (Arreglo B).</p>
+    <div class="container-arreglo">
+        <button class="btn" onclick="shift();">Eliminar</button>
+    </div>    
+    <p id="resultado-shift" class="resultado"></p>
+
+    <p class="funciones">Usando <strong>indexOf</strong>: Obtiene la posición de primer elemento que se encuentre y sea igual a lo buscado(Arreglo B).</p>
+    <div class="container-arreglo">
+        <p>Ingrese valor: </p>
+        <input type="text" id="txt-valorindexof"/>
+        <button class="btn" onclick="indexof();">Buscar</button>
+    </div>    
+    <p id="resultado-indexof" class="resultado"></p>
+
+    <p class="funciones">Usando <strong>lastIndexOf</strong>: Obtiene la posición de último elemento que se encuentre y sea igual a lo buscado (Arreglo B).</p>
+    <div class="container-arreglo">
+        <p>Ingrese valor: </p>
+        <input type="text" id="txt-valorlastindexof"/>
+        <button class="btn" onclick="lastindexof();">Buscar</button>
+    </div>    
+    <p id="resultado-lastindexof" class="resultado"></p>
+
+    <p class="funciones">Usando <strong>sort</strong>: Ordena el arreglo de manera ascendente (Arreglo A).</p>
+    <div class="container-arreglo">
+        <button class="btn" onclick="sort();">Ordenar</button>
+    </div>    
+    <p id="resultado-sort" class="resultado"></p>
+
+    <p class="funciones">Usando <strong>reverse</strong>: Ordena el arreglo de manera descendente (Arreglo A).</p>
+    <div class="container-arreglo">
+        <button class="btn" onclick="reverse();">Ordenar</button>
+    </div>    
+    <p id="resultado-reverse" class="resultado"></p>
+
+    <p class="funciones">Usando <strong>concat</strong>: Concatenar dos arreglos (Arreglo A y Arreglo B).</p>
+    <div class="container-arreglo">
+        <button class="btn" onclick="concat();">Concatenar</button>
+    </div>    
+    <p id="resultado-concat" class="resultado"></p>
+
+    <p class="funciones">Usando <strong>slice</strong>: Obtiene parte de los elementos de un arreglo (Arreglo B).</p>
+    <div class="container-arreglo">
+        <p>Ingrese valor1 (Desde): </p>
+        <input type="text" id="txt-valorslice1"/>
+    </div>
+    <div class="container-arreglo">
+        <p>Ingrese valor2 (Hasta): </p>
+        <input type="text" id="txt-valorslice2"/>
+    </div>    
+    <button class="btn" onclick="slice();">Extraer</button>
+    <p id="resultado-slice" class="resultado"></p>
+
+    <p class="funciones">Usando <strong>join</strong>: Concatena el arreglo en una cadena (Arreglo B).</p>
+    <div class="container-arreglo">
+        <p>Ingrese valor: </p>
+        <input type="text" id="txt-valorjoin"/>
+        <button class="btn" onclick="join();">Concatenar</button>
+    </div>  
+    <p id="resultado-join" class="resultado"></p>
+
+    <p class="funciones">Usando <strong>splice</strong>: Con los 2 primeros parámetros se puede eliminar elementos de un arreglo, indicando desde dónde (posición) y la cantidad de elementos (Arreglo A).</p>
+    <div class="container-arreglo">
+        <p>Ingrese valor1 (Posición): </p>
+        <input type="text" id="txt-valorsplice1"/>
+    </div>  
+    <div class="container-arreglo">
+        <p>Ingrese valor2 (Cant. de Elementos): </p>
+        <input type="text" id="txt-valorsplice2"/>
+    </div>  
+    <button class="btn" onclick="spliceEliminar();">Extraer</button>
+    <p id="resultado-splice1" class="resultado">
+
+    <p class="funciones">Usando <strong>splice</strong>: Con los 3 parámetros se puede reemplazar los elementos de un arreglo, indicando desde dónde (posición) y la cantidad de elementos (Arreglo A).</p>
+    <div class="container-arreglo">
+        <p>Ingrese valor1 (Posición): </p>
+        <input type="text" id="txt-valorsplice4"/>
+    </div>  
+    <div class="container-arreglo">
+        <p>Ingrese valor2 (Cant. de Elementos): </p>
+        <input type="text" id="txt-valorsplice5"/>
+    </div>  
+    <div class="container-arreglo">
+        <p>Ingrese valor3 (Nuevo valor de elemento): </p>
+        <input type="text" id="txt-valorsplice6"/>
+    </div>  
+    <button class="btn" onclick="spliceEditar();">Extraer</button>
+    <p id="resultado-splice2" class="resultado">
+    
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, papel y tijera</title>
+    <style>
+        :root{
+            --primary-color: #1d02ff;
+            --second-color: white;
+            --font-family: 'Verdana', sans-serif;
+            --sm: 14px;
+            --md: 20px;
+            --lg: 45px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        p{
+            font-size: var(--lg);       
+            font-weight: bolder;     
+        }
+        .img-portada{
+            
+        }
+        .btn{
+            width: 320px;
+            height: 60px;
+            margin-top: 2rem;
+            background-color: var(--primary-color);
+            color: var(--second-color);
+            font-weight: bold;
+            font-size: var(--md);
+            text-transform: uppercase;
+            border: unset;
+            border-radius: 17px;
+            cursor: pointer;
+        }        
+        .btn, p{
+            font-family: var(--font-family);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>¿Piedra, Papel o Tijera?</p>
+        <figure>
+            <img src="./assets/home-portada.png" alt="Portada"  class="img-portada" width="1200" height="380">
+        </figure>
+        <button class="btn" onclick="jugar();">Jugar</button>
+    </div>
+    <script src="./index.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, papel y tijera</title>
+    <style>
+        :root{
+            --primary-color: #1d02ff;
+            --second-color: white;
+            --font-family: 'Verdana', sans-serif;
+            --sm: 14px;
+            --md: 20px;
+            --lg: 45px;
+        }
+        div.container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        p{
+            font-size: var(--lg);       
+            font-weight: bolder;     
+        }
+        div.container-selection{
+            display: flex;
+            flex-direction: row;
+        }
+        div.container-selection > div.container-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }   
+        div.container-item > p{
+            font-size: var(--md);       
+            font-weight: bolder;     
+            font-family: var(--font-family);
+            text-transform: uppercase;
+        }    
+        .img-selection{
+            cursor: pointer;
+            border-radius: 50%;
+        } 
+        .img-selection:hover{
+            width: 400px;
+            height: 400px;
+        } 
+        div.container-b{
+            text-align: center;
+            display: none;
+        }
+        p.computadora, p.humano, p.resultado{
+            margin: 30px 0;
+        }
+        .btn{
+            width: 320px;
+            height: 60px;
+            margin-top: 2rem;
+            background-color: var(--primary-color);
+            color: var(--second-color);
+            font-weight: bold;
+            font-size: var(--md);
+            text-transform: uppercase;
+            border: unset;
+            border-radius: 17px;
+            cursor: pointer;
+        }        
+        .btn, p{
+            font-family: var(--font-family);
+        }      
+    </style>
+</head>
+<body>
+    <div class="container-a" id="container-a">
+        <div class="container">
+            <p>¿Cuál eliges?</p>
+            <div class="container-selection">
+                <div class="container-item">
+                    <figure>
+                        <img src="./assets/piedra.png" alt="Gesto Piedra"  class="img-selection" width="370" height="370" onclick="seleccion('piedra');">
+                    </figure>
+                    <p>Piedra</p>
+                </div>
+                <div class="container-item">
+                    <figure>
+                        <img src="./assets/tijera.png" alt="Gesto Tijera"  class="img-selection" width="370" height="370" onclick="seleccion('tijera');">
+                    </figure>
+                    <p>Tijera</p>
+                </div>
+                <div class="container-item">
+                    <figure>
+                        <img src="./assets/papel.png" alt="Gesto Papel"  class="img-selection" width="370" height="370" onclick="seleccion('papel');">
+                    </figure>
+                    <p>Papel</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-b" id="container-b">
+        <div class="container">
+            <p class="computadora" id="computadora">Computadora: Tijera</p>
+            <p class="humano" id="humano">Tú: Tijera</p>
+            <p class="resultado" id="resultado">¡Ganaste!</p>
+            <button class="btn" onclick="intentarNuevamente();">Jugar de nuevo</button>
+        </div>
+    </div>
+    <script src="./index.js" type="text/javascript"></script>
+</body>
+</html>
