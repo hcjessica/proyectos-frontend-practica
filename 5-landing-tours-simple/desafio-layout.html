@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío Layout</title>
+    <link rel="stylesheet" href="./desafio-layout.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="./img/logo-hctours.png" alt="Logo" class="navbar__logo">
+            <ul class="navbar__lista menu">
+                <li class="menu__opcion"><a href="#" class="menu--opcion_link">Inicio</a></li>
+                <li class="menu__opcion"><a href="#" class="menu--opcion_link">Lugares</a></li>
+                <li class="menu__opcion"><a href="#" class="menu--opcion_link">Multimedia</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <aside class="accesosdirecto">
+            <article class="card">
+                <figure class="card__imagen">
+                    <img src="./img/card-cajamarca.jpg" alt="Foto sobre Cajamarca" class="card--imagen_foto">
+                </figure>
+                <div class="card__title">
+                    <p class="card--title_texto">Cajamarca</p>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__imagen">
+                    <img src="./img/card-cuzco.jpg" alt="Foto sobre Cuzco" class="card--imagen_foto">
+                </figure>
+                <div class="card__title">
+                    <p class="card--title_texto">Cuzco</p>                    
+                </div>
+            </article>
+        </aside>
+        <section class="section">
+            <div class="ruta">
+                <a href="#" class="ruta__enlace">Inicio</a>
+                <span class="ruta__separador"> / </span>
+                <a href="#" class="ruta__enlace">Cajamarca</a>
+            </div>
+            <div class="information">
+                <p class="information__title information--title_texto">Cajamarca</p>
+                <div class="information__photos">
+                    <figure class="information__photos1">
+                        <img src="./img/banos-termales.jpg" alt="Foto de lugar turístico" class="information--photos1_lugar1">
+                        <img src="./img/mirador-turistico.jpg" alt="Foto de lugar turístico" class="information--photos1_lugar2">
+                    </figure>
+                    <figure class="information__photos2">
+                        <img src="./img/mapa-cajamarca.png" alt="Foto de lugar turístico" class="information__photos2_mapa">
+                    </figure>
+                    <figure class="information__photos3">
+                        <img src="./img/ventanillas-de-otuzco.jpg" alt="Foto de lugar turístico" class="information--photos3_lugar3">
+                        <img src="./img/point-cajamarca.jpg" alt="Foto de lugar turístico" class="information--photos3_lugar4">
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__texto">Síguenos en nuestras redes sociales</p>
+        <figure class="footer__socialmedia">
+            <img src="./img/icon-facebook.png" alt="Icono de Facebook" class="footer--socialmedia_fb">
+            <img src="./img/icon-twitter.png" alt="Icono de Twitter" class="footer--socialmedia_twitter">
+            <img src="./img/icon-instagram.png" alt="Icono de Instagram" class="footer--socialmedia_ig">
+        </figure>
+    </footer>
+</body>
+</html>

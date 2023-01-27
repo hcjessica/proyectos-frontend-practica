@@ -37,3 +37,9 @@ A popular game applying JS and flexbox.
 Some available functions to test and practice in arrays.  
 
 ![Project 2](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project4-1.png)
+
+## 5. Landing about tours (using display: inline, block, inline-block)
+
+Design of a simple informative landing about trips (Screen "Cajamarca"). 
+
+![Project 2](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project5-1.png)

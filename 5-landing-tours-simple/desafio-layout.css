@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+/*Barra de menú*/
+.navbar{
+    height: 87px;
+    background-color: #ffd60f;
+}
+.navbar__logo{
+    width: 150px;
+    height: 85px;
+    padding: 6px 5px 0;
+    margin-left: 10px;
+}
+.navbar__lista{
+    display: inline-block;
+    position: absolute;
+    top:20px;
+    right: 10px;
+    list-style-type: none;
+}
+.menu__opcion{
+    display: inline-block;
+    padding: 0 6px;
+    font-family: cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    
+}
+.menu__opcion::after{
+    content: " |";
+    color: black;
+}
+.menu__opcion:last-child::after{
+    content: "";
+}
+.menu--opcion_link{
+    font-family: cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+.menu--opcion_link:hover{    
+    color: white;
+}
+/*Aside*/
+.accesosdirecto{
+    display: inline-block;
+    padding: 30px 0;
+    height: 100%;
+    width: 320px;
+    background-color: #000000c7;
+}
+.card{
+    width: 250px;
+    height: 250px;
+    background-color: rgb(15, 15, 251);
+    margin: 10px auto 28px;
+    border-radius: 40px;
+    border: 3px solid white
+}
+.card__imagen{
+    width: 100%;
+    height: 200px; 
+}
+.card--imagen_foto{
+    width: 100%;
+    height: 200px;
+    border-radius: 40px 40px 0 0;
+}
+.card__title{
+    height: 50px;
+    padding: 12px;    
+}
+.card--title_texto{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+}
+/*Seccion*/
+.section{
+    display: inline-block;
+    padding: 2px 40px;
+    height: 100%;
+    width: 76%;
+}
+.ruta{
+    margin-top: 9px;
+}
+.ruta__enlace:first-child{
+    text-decoration: none;
+}
+.ruta__enlace, .ruta__separador{
+    font-size: 1.7rem;
+    color: blue;
+}
+.ruta__separador{
+    font-weight: bold;
+}
+.information{
+   
+}
+.information--title_texto{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 7rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 26px;
+}
+.information__photos {
+    padding: 0 45px;
+}
+.information__photos1,
+.information__photos2,
+.information__photos3{
+    display: inline-block;
+    width: 33.12%;
+}
+.information--photos1_lugar1,
+.information--photos1_lugar2,
+.information--photos3_lugar3,
+.information--photos3_lugar4{
+    display: block;   
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin: 9px auto;
+}
+.information__photos2_mapa{
+    display: block;   
+    width: 250px;
+    height: 410px;  
+    margin: auto;
+}
+@media (max-width: 1365px) {
+    .menu--opcion_link{
+        font-size: 1.2rem;
+    }
+    .accesosdirecto, .section{
+        width:100%;
+        padding: 40px;
+    }
+}
+@media (max-width: 961px) {
+    .information__photos1,
+    .information__photos2,
+    .information__photos3{
+        display: block;   
+        margin: auto;     
+        width: 100%;    
+    }    
+}
+/*Footer*/
+.footer{
+    padding: 6px 0;
+    background-color: black;
+}
+.footer__texto{
+    width: fit-content;
+    padding: 3px 12px;
+    margin: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.7rem;
+    color: white;
+}
+.footer__socialmedia{
+    width: fit-content;
+    margin: 5px auto 0;
+}
+.footer--socialmedia_fb,
+.footer--socialmedia_twitter,
+.footer--socialmedia_ig
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
