@@ -29,17 +29,23 @@ Some user interfaces about yard sale applying flexbox and css grid. Interfaces d
 
 A popular game applying JS and flexbox.
 
-![Project 2](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project3-1.png)
-![Project 2](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project3-2.png)
+![Project 3](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project3-1.png)
+![Project 4](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project3-2.png)
 
 ## 4. Testing functions in js (using arrays)
 
 Some available functions to test and practice in arrays.  
 
-![Project 2](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project4-1.png)
+![Project 4](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project4-1.png)
 
 ## 5. Landing about tours (using display: inline, block, inline-block)
 
 Design of a simple informative landing about trips (Screen "Cajamarca"). 
 
-![Project 2](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project5-1.png)
+![Project 5](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project5-1.png)
+
+## 6. Landing about clothes store (using display: flex)
+
+Design of a simple informative landing about clothes (Screen "Highlights Products"). 
+
+![Project 6](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project6-1.png)
