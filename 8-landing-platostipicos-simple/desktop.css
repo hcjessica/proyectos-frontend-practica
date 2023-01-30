@@ -1,0 +1,47 @@
+@media (min-width: 800px){
+    body{
+        display: flex;
+    }
+    .header{
+        max-width: 48px;
+    }
+    .header--titulo{
+        height: 100%;
+        margin: auto;
+        writing-mode: vertical-rl;/*derecha derecha*/
+        text-orientation: upright;/*orientación en vertical*/       
+        vertical-align: middle; 
+    }
+    .section{
+        padding: 35px ;
+    }
+    .card{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin: 15px;
+        padding: 25px;
+        border-radius: 20px;
+        border: 1px solid black;
+    }
+    .card:nth-child(3n + 3) {
+        width: 100%;
+    }
+    .card--titulo{
+        margin-right: 15px; 
+    }
+    .card__figure{
+        padding: 0;
+        order: 3;
+    }
+    .card--figure_img{
+        width: 250px;
+        height: 190px;    
+    }
+    .card--descripcion{
+        width: 45%;
+        margin-right: 15px; 
+        order: 2;
+    }
+}

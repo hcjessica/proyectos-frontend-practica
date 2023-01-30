@@ -55,3 +55,9 @@ Design of a simple informative landing about clothes (Screen "Highlights Product
 Design of a simple informative landing about pokemones (Screen "Highlights Pokemones"). 
 
 ![Project 7](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project7-1.png)
+
+## 8. Landing about traditional dishes (using display: flex and pattern layout shifter)
+
+Design of a simple informative landing about traditional dishes (Screen "Dishes"). 
+
+![Project 8](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project8-1.png)
