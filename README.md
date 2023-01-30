@@ -49,3 +49,9 @@ Design of a simple informative landing about trips (Screen "Cajamarca").
 Design of a simple informative landing about clothes (Screen "Highlights Products"). 
 
 ![Project 6](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project6-1.png)
+
+## 7. Landing about pokemones (using display: flex and pattern mostly fluid)
+
+Design of a simple informative landing about pokemones (Screen "Highlights Pokemones"). 
+
+![Project 7](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project7-1.png)
