@@ -61,3 +61,9 @@ Design of a simple informative landing about pokemones (Screen "Highlights Pokem
 Design of a simple informative landing about traditional dishes (Screen "Dishes"). 
 
 ![Project 8](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project8-1.png)
+
+## 9. Landing "cloning to Google" 
+
+Cloning web "search Google"
+
+![Project 9](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project9-1.png)

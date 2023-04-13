@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    margin: 0;
+}
+:root{
+    --color-primary: grey;
+    --color-secondary: #F0F0F0;
+    --font-small: 1.3rem;
+    --font-xsmall: 1.2rem;
+}
+.header{
+    height: 10vh;
+    
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 20px 0 0;
+    padding: 10px 0;
+    list-style-type: none;
+}
+.menu__li{
+    padding: 0 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--font-small);
+    color: var(--color-primary);
+    font-weight: 200;
+}
+.opcionfoto{
+    margin: 0;
+    width: auto;
+    height: auto;
+}
+.opcionfoto--img{
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+.logomarca--img{
+    width: 320px;   
+}
+.buscador{
+    margin-top: 30px;
+    width: 80%;
+    position: relative;
+}
+.buscador--input{
+    position:relative;
+    height: 40px;
+    width: 100%;
+    border: 1.5px solid var(--color-secondary);
+    border-radius: 15px;
+}
+.buscador--iconsearcher,
+.buscador--iconmicrophone{
+    position: absolute;
+    top: 8px;    
+}
+.buscador--iconsearcher{
+    left: 10px;
+}
+.buscador--iconmicrophone{
+    right: 10px;
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 35px;
+    width: 100%;
+}
+.botones__buscador{
+    margin: 0 15px;
+    padding: 13px;
+    border:none;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;    
+    padding: 0 10px;
+    background-color: var(--color-secondary);
+}
+.lista1,
+.lista2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style-type: none;
+}
+.lista1__li,
+.lista2__li{
+    padding: 0 10px;
+    font-size: var(--font-xsmall);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-primary);
+}
+
+
