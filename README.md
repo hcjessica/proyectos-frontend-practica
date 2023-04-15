@@ -67,3 +67,9 @@ Design of a simple informative landing about traditional dishes (Screen "Dishes"
 Cloning web "search Google"
 
 ![Project 9](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project9-1.png)
+
+## 10. Landing "cloning to Wikipedia" 
+
+Cloning web "Wikipedia"
+
+![Project 9](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project10-1.png)
