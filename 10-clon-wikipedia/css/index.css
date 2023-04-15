@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+.sectionInicio{
+    width: 100%;
+}
+.sectionInicio__containerPortada{
+    width: 800px;
+    margin: 40px auto 0;
+    text-align: center;
+}
+.sectionInicio__containerPortada-titulo{
+    font-size: 2.8rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.sectionInicio__containerPortada-subtitulo{
+    font-size: 1.6rem;
+}
+.sectionInicio__containerPortada-paises{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+/*Mundo Wikipedia*/
+.sectionInicio__containerPortada-logo{
+    width: 200px;    
+    height: 195px;  
+}
+/*Items paises*/
+.containerPortada__paises1 a,
+.containerPortada__paises2 a{
+    display: block;
+    padding-bottom: 15px;
+    width: fit-content;
+}
+.containerPortada__paises1 a:nth-child(1){
+    padding-left: 62px;
+}
+.containerPortada__paises1 a:nth-child(2){
+    padding-left: 38px;
+}
+.containerPortada__paises1 a:nth-child(3){
+    padding-left: 14px;
+}
+.containerPortada__paises1 a:nth-child(4){
+    padding-left: 51px;
+}
+.containerPortada__paises1 a:nth-child(5){
+    padding-left: 101px;
+}
+.containerPortada__paises2 a:nth-child(1){
+    padding-left: 0;
+}
+.containerPortada__paises2 a:nth-child(2){
+    padding-left: 37px;
+}
+.containerPortada__paises2 a:nth-child(3){
+    padding-left: 51px;
+}
+.containerPortada__paises2 a:nth-child(4){
+    padding-left: 42px;
+}
+.containerPortada__paises2 a:nth-child(5){
+    padding-left: 0;
+}
+.containerPortada__paises1 a span:first-child,
+.containerPortada__paises2 a span:first-child{
+    display: block;    
+    font-size: 1.7rem;
+    color: #36c;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+}
+.containerPortada__paises1 a span:first-child:hover,
+.containerPortada__paises2 a span:first-child:hover{
+    text-decoration: underline;
+}
+.containerPortada__paises1 a span:last-child,
+.containerPortada__paises2 a span:last-child{    
+    font-size: 1.4rem;
+    color: black;
+    font-family: Helvetica;
+    font-weight: normal;
+    text-decoration: none;
+}
+/*buscador*/
+.sectionInicio__containerSearcher{
+    width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+.containerSearcher-input{
+    position: relative;
+    height: 42px;
+}
+.containerSearcher-input-caja{
+    height: 42px;
+    width: 400px;
+    padding: 0 0 0 12px;
+    border: 1px solid #a3a9b0;
+    outline: #36c;
+}
+.containerSearcher-input-caja:hover{
+    border-color: #72777d;
+}
+.containerSearcher-input-caja:focus{
+    border: 2px solid #36c;
+}
+/*ES*/
+.containerSearcher-input span{
+    position: absolute;
+    right: 35px;    
+    font-family: monospace;
+    font-size: 1.5rem;
+    padding: 13px 0;
+}
+/*↓*/
+.containerSearcher-input-img{
+    position: absolute;
+    right: 4px;
+    width: 24px;
+    padding: 10px 0;
+    transform: rotate(180deg);
+}
+.sectionInicio__containerSearcher-btn{
+    height: 46px;
+    width: 60px;
+    background-color: #36c;
+    border: 1px solid #36c;
+    cursor: pointer;
+}
+.sectionInicio__containerSearcher-btn:hover{
+    background-color: #447ff5;
+    border-color: #447ff5;
+}
+.sectionInicio__containerSearcher-btn img{
+    height: 22px;
+    width: 22px;
+}
+/*leer wikipedia*/
+.sectionInicio__containerLeer{
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    margin: auto;
+    margin-top: 32px;
+}
+.sectionInicio__containerLeer-linea{
+    border-top: 1px solid #a3a9b0;
+    width: 90px;
+    margin: 17px 20px 0;
+}
+.sectionInicio__containerLeer-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 35px;
+    border: 1px solid #a3a9b0;
+    background-color: #f8f9fa;
+    color: #36c;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.sectionInicio__containerLeer-btn:hover{
+    background-color: #fff;
+    border-color: #a2a9b1;
+    cursor: pointer;
+}
+.sectionInicio__containerLeer-btn:focus{
+    outline: 1px solid #36c;
+}
+.sectionInicio__containerLeer-img1{
+    height: 22px;
+    width: 22px;
+}
+.sectionInicio__containerLeer-img2{
+    height: 22px;
+    width: 22px;
+    transform: rotate(180deg);
+    color: #36c;
+}
+/*segunda sección*/
+.sectionInformation{
+    width: 100%;
+    margin-top: 28px;
+    margin-bottom: 55px;
+}
+.sectionInformation__linea{
+    width: 95%;
+    margin: 2px auto;
+}
+.sectionInformation__linea-span{
+    display: inline-block;
+    border-top: 1px solid #a3a9b0;
+    width: inherit;
+}
+.sectionInformation__contenido{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-rows: 1fr;
+    padding: 20px 100px;
+}
+ @media (max-width:1119px){
+    .sectionInformation__contenido{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .containerAboutwiki{
+        margin-bottom: 30px;
+    }
+}
+.containerAboutwiki{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+.containerAboutwiki1,
+.containerAboutwiki2{
+    display: flex;
+    gap: 12px;    
+    width: 350px;
+    margin: auto;
+}
+.containerAboutwiki--img1,
+.containerAboutwiki--img2{
+    width: 50px;
+    height: 50px;
+}
+.containerAboutwiki--texto{
+    margin-bottom: 20px;
+}
+.containerAboutwiki--texto,
+.containerAboutwiki--titulo{
+    font-size: 1.4rem;
+    font-family: Helvetica;
+    text-align: justify;
+    line-height: 1.6rem;
+}
+.containerAboutwiki--a{
+    display: block;
+    color: #36c;
+    text-decoration: none;
+}
+.containerAboutwiki--titulo{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.containerAboutwiki--a1,
+.containerAboutwiki--a2{
+    cursor: pointer;
+}
+.containerEnlaces{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.containerEnlacesitem{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    margin: 10px;
+    padding-left: 10px;
+}
+.containerEnlacesitem:hover{
+    background-color: #eaecf0;
+}
+.containerEnlacesitem:focus{
+    outline: 1px solid #36c;
+}
+.containerEnlacesitem__img{
+    width: 50px;
+    height: 50px;
+}
+.containerEnlacesitem__descripcion{
+
+}
+.containerEnlacesitem__titulo,
+.containerEnlacesitem__texto{
+    font-size: 1.4rem;
+    font-family: Helvetica;
+    line-height: 1.6rem;
+    color: #36c;
+    
+}
+.containerEnlacesitem__texto{
+    color: black;
+}
+.footer{
+    width: 100%;
+    margin-bottom: 18px;
+}
+.footer__linea{
+    width: 95%;
+    margin: 2px auto;
+}
+.footer__lineaspan{
+    display: inline-block;
+    border-top: 1px solid #a3a9b0;
+    width: inherit;
+}
+.containerFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    margin-top: 15px; 
+}
+.footer__texto{ 
+    text-align: right;
+}
+.footer__texto,
+.footer__texto-a,
+.footer__ul{
+    font-size: 1.4rem;
+    font-family: Helvetica;
+    line-height: 1.6rem;      
+}
+.footer__texto-a{
+    color: #36c;
+    text-decoration: none;
+}
+.footer__ul{ 
+    display: flex;
+    color: #36c;
+    gap: 28px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+.footer__texto-a:hover,
+.footer__ul li:hover{
+    text-decoration: underline;
+}
