@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+.navbar--titulo{
+    background-color: #351C75;
+}
+.navbar__nomempresa{
+    margin-left: 1.5rem;
+    color: white;
+}
+.navbar__logo{
+    
+}
+.navbar__imglogo{
+    
+}
+.navbar--menu{
+    background-color: #000;
+}
+.navbar__botonmenu{
+    background-color: #fff;
+    padding: 8px;
+}
+.navbar__iconomenu{
+    height: 1.8rem;
+    width: 2rem;
+}
+.menu{
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 3px 0;
+}
+.menu__opcionactivo{
+    color:aqua;
+}
+.menu__opcion{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: white;
+    text-decoration: none;
+}
+.menu__opcion:hover:active:visited:focus{
+    color: white;
+}
+.carousel__iconcontrol{
+    width: 7rem;
+    height: 5rem;
+}
+.lema{
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #351C75;
+}
+.banner{
+    margin: 0;
+    background-color: #c54484;
+}
+.banner--1{
+    background-color: #c54484;
+}
+.banner--2{
+    background-color: #351C75;
+}
+.banner__titulo{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2.1rem;
+    color: white;
+    text-align: center;
+}
+.banner__contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.banner__titulo{
+    margin-bottom: 2.2rem;
+}
+.banner__grupocontenido{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 40%;
+}
+.banner__bloque{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+.banner_texto{
+    font-family: sans-serif;
+    font-size: 1.8rem;
+    color: white;
+}
