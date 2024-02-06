@@ -68,9 +68,10 @@
     background-color: #351C75;
 }
 .banner__titulo{
+    margin-bottom: 2.2rem;
     font-family: sans-serif;
     font-weight: bold;
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     color: white;
     text-align: center;
 }
@@ -80,9 +81,6 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-}
-.banner__titulo{
-    margin-bottom: 2.2rem;
 }
 .banner__grupocontenido{
     display: flex;
