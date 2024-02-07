@@ -1,5 +1,6 @@
 .portada__img{
     width: 100%;
+    max-height: 685.5px;
 }
 .section__formulario{
     display: flex;
@@ -42,6 +43,7 @@
     padding: 10px 0;
     font-size: 1.7rem;
     color: #0021d7;
+    border: 0.1rem solid #36323245;
     text-transform: uppercase;
 }
 .form__campo:focus{
