@@ -31,8 +31,7 @@
     align-items: center;
     justify-content: flex-start;
     max-width: 300px;
-    min-height: 436px;
-    
+    min-height: 436px;    
 }
 .servicios__card:nth-child(odd){
     border: 0.2rem solid #351C75;
