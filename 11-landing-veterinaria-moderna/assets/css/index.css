@@ -4,6 +4,7 @@
     padding: 0;
     font-size: 62.5%;
 }
+/*Barra de título y menú*/
 .navbar--titulo{
     background-color: #351C75;
 }
@@ -46,10 +47,12 @@
 .menu__opcion:hover:active:visited:focus{
     color: white;
 }
+/*slide*/
 .carousel__iconcontrol{
     width: 7rem;
     height: 5rem;
 }
+/*sección banners*/
 .lema{
     margin-top: 6rem;
     margin-bottom: 3rem;
@@ -100,4 +103,122 @@
     font-family: sans-serif;
     font-size: 1.8rem;
     color: white;
+}
+/*Por qué elegirnos*/
+.pqelegirnos__grupo, .blog__grupo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+.pqelegirnos__card, .blog__card{
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 16px;
+    max-width: 260px;
+    border: 0.1rem solid #36323245;
+    min-height: 350px;
+}
+.pqelegirnos__img, .blog__img{
+    width: 200px;
+    height: 200px;
+}
+.pqelegirnos__texto, .blog__titulo, .blog__texto{
+    margin: 0;
+    padding: 0 8px;
+    font-family: sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+}
+/*blog*/
+.blog__card{
+    justify-content: space-between;
+    max-width: 290px;
+    min-height: 436px;
+    border: 0.2rem solid black;
+}
+.blog__img{
+    width: 100%;
+}
+.blog__titulo{
+    padding: 0 12px;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.blog__texto{
+    padding: 0 12px;
+    text-align: justify;
+}
+.blog__btn{
+    margin-bottom: 16px;
+    font-family: sans-serif;
+    background-color: #c54484;
+    color: white;
+    font-size: 1.4rem;
+}
+.blog__btn:hover{
+    background-color: #351C75;
+    color: white;
+}
+.footer{
+    margin-top: 20px;
+}
+.footer__grupo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    background-color: #000;
+}
+.footer__bloque{
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    max-width: 350px;
+    min-height: 350px;
+    background-color: #c54484;
+}
+.footer__logo{
+
+}
+.footer__bloqueredes{
+
+}
+.footer__texto{
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    color: white;
+}
+.footer__redes{
+    margin-top: 8px;
+}
+.footer__titulo{
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 1.4rem;
+    color: white;
+}
+.footer__listaaccesos{
+
+}
+.footer__accesodirecto{
+
+}
+.footer__datos{
+
+}
+.footer__dato{
+
+}
+.footer__author{
+    background-color: #351C75;
 }

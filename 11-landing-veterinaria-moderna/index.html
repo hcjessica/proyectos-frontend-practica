@@ -85,12 +85,12 @@
                 <span class="carousel-control-next-icon carousel__iconcontrol"></span>
             </button>
         </div>
-        <section class="section">
+        <section class="section__banners">
             <p class="lema">Tenemos lo que tu mascota necesita</p>
             <div class="row banner banner--1">
-                <div class="col-3 col-sm-3 col-md-1 col-lg-2"></div>
-                <div class="col-8 col-sm-8 col-md-4 col-lg-3">
-                    <img src="./assets/img/imgbanner1.png" class="rounded-start" alt="Imagen banner 1" width="300" height="350" >
+                <div class="col-lg-1"></div>
+                <div class="col-12 col-sm-12 col-md-5 col-lg-4">
+                    <img src="./assets/img/imgbanner1.png" class="rounded-start mx-auto d-block" alt="Imagen banner 1" width="290" height="300" >
                 </div>
                 <div class="col-12 col-sm-12 col-md-7 col-lg-6">
                     <div class="banner__contenido">
@@ -132,13 +132,94 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-8 col-sm-8 col-md-5 col-lg-4">
-                    <img src="./assets/img/imgbanner4.png" class="rounded-start" alt="Imagen banner 2" width="340" height="350" >
+                <div class="col-12 col-sm-12 col-md-5 col-lg-4">
+                    <img src="./assets/img/imgbanner4.png" class="img-fluid rounded-start mx-auto d-block" alt="Imagen banner 2" width="300" height="320" >
                 </div>
-                <div class="col-3 col-sm-3 col-lg-1"></div>
-            </div>
-            
+                <div class="col-lg-1"></div>
+            </div>            
         </section>
+        <section class="section__pqelegirnos">
+            <p class="lema">¿Por qué elegirnos?</p>
+            <div class="pqelegirnos__grupo">
+                <article class="pqelegirnos__card">
+                    <img src="./assets/img/experiencia.png" alt="Imagen sobre experiencia" width="80" height="50" class="d-inline-block align-text-top pqelegirnos__img">
+                    <p class="pqelegirnos__texto">Contamos con médicos veterinarios residentes, expertos y reconocidos en el rubro veterinario a nivel nacional e internacional por su trayectoria.</p>
+                </article>
+                <article class="pqelegirnos__card">
+                    <img src="./assets/img/huella.png" alt="Imagen sobre servicios" width="80" height="50" class="d-inline-block align-text-top pqelegirnos__img">
+                    <p class="pqelegirnos__texto">Realizamos tratamientos especializados para lograr el bienestar de la mascota y mejorar su calidad de vida. De acuerdo a, la necesidad de nuestros pacientes y de sus familias.</p>
+                </article>
+                <article class="pqelegirnos__card">
+                    <img src="./assets/img/trabajo_equipo.png" alt="Imagen sobre trabajo en equipo" width="80" height="50" class="d-inline-block align-text-top pqelegirnos__img">
+                    <p class="pqelegirnos__texto">Nuestro equipo humano trabaja íntegramente para buscar soluciones beneficiosas en pro de la salud de nuestros pacientes y la tranquilidad de sus familias que confían en nosotros.</p>
+                </article>
+            </div>
+        </section>
+        <section class="section__blog">
+            <p class="lema">Visita nuestro blog</p>
+            <div class="blog__grupo">
+                <article class="blog__card">
+                    <img src="./assets/img/blog1.png" alt="Imagen sobre blog 1" width="80" height="50" class="d-inline-block align-text-top blog__img">
+                    <p class="blog__titulo">Cómo acudir con tu gato al veterinario</p>
+                    <p class="blog__texto">El momento de llevar al gato al veterinario puede ser temido por mucha gente.  Es una situación que puede volverse estresante para el animal y ...</p>
+                    <button type="button" class="btn btn-lg blog__btn">Leer Más</button>
+                </article>
+                <article class="blog__card">
+                    <img src="./assets/img/blog2.png" alt="Imagen sobre blog 2" width="80" height="50" class="d-inline-block align-text-top blog__img">
+                    <p class="blog__titulo">Plantas tóxicas para perros y gatos</p>
+                    <p class="blog__texto">El momento de llevar al gato al veterinario puede ser temido por mucha gente.  Es una situación que puede volverse estresante para el animal y ...</p>
+                    <button type="button" class="btn btn-lg blog__btn">Leer Más</button>
+                </article>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__grupo">
+                <div class="footer__bloque">
+                    <img src="./assets/img/logo.jpg" alt="Imagen del logo de la empresa" width="180" height="100" class="d-inline-block align-text-top footer__logo">
+                    <div class="footer__bloqueredes">
+                        <p class="footer__texto">Síguenos en:</p>
+                        <figure class="footer__redes">
+                            <img src="./assets/img/icon_facebook.png" alt="Imagen de Facebook" width="30" height="30" class="d-inline-block align-text-top footer__red">
+                            <img src="./assets/img/icon_x.png" alt="Imagen de X" width="30" height="30" class="d-inline-block align-text-top footer__red">
+                            <img src="./assets/img/icon_youtube.png" alt="Imagen de Youtube" width="30" height="30" class="d-inline-block align-text-top footer__red">
+                        </figure>
+                    </div>
+                </div>
+                <div class="footer__bloque">
+                    <p class="footer__titulo">ACCESOS DIRECTOS</p>
+                    <ul class="footer__listaaccesos">
+                        <li><a href="#" class="footer__accesodirecto">REGISTRO</a></li>
+                        <li><a href="#" class="footer__accesodirecto">NEGOCIO</a></li>
+                        <li><a href="#" class="footer__accesodirecto">SERVICIOS</a></li>
+                        <li><a href="#" class="footer__accesodirecto">CONTÁCTANOS</a></li>
+                    </ul>
+                </div>
+                <div class="footer__bloque">
+                    <p class="footer__titulo">CONTÁCTANOS</p>
+                    <ul class="footer__datos">
+                        <li class="footer__dato">
+                            <i class="bi bi-geo-alt"></i>
+                            <span class="footer__texto">Salaverry #165 Jesus María</span>
+                        </li>
+                        <li class="footer__dato">
+                            <i class="bi bi-telephone"></i>
+                            <span class="footer__texto">+51 947 598 100</span></li>
+                        <li class="footer__dato">
+                            <i class="bi bi-envelope"></i>
+                            <span class="footer__texto">info@veterinaria-moderna.pe</span>
+                        </li>
+                        <li class="footer__dato">
+                            <i class="bi bi-clock"></i>
+                            <span class="footer__texto">Lunes a viernes : 10:00am a 8:00 pm</span>
+                            <span class="footer__texto">Sábado: 10:00 am a 6:00 pm</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__author">
+                <p class="footer__texto">2024. Desarrollado por Huancollo Chambi Fabiola Jessica</p>
+            </div>
+        </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
