@@ -1,0 +1,27 @@
+.portada__img{
+    width: 100%;
+}
+.section__formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.form_grupo{
+    max-width: 250px;
+}
+.form__titulo{
+    padding: 4px 5px;
+    font-family: sans-serif;
+    font-size: 1.7rem;
+    background-color: #c54484;
+    color: white;
+    font-weight: bold;
+}
+.form__bloque{
+
+}
+.form__texto{
+    font-family: sans-serif;
+    font-size: 1.6rem;
+}
