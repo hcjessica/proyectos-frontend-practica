@@ -1,6 +1,6 @@
 .portada__img{
     width: 100%;
-    height: 685.5px;
+    max-height: 685.5px;
 }
 .section__mision, .section__equipo{
     display: flex;
