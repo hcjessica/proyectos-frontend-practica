@@ -75,7 +75,6 @@ button.form__btn:hover, button.form__btn:active, button.form__btn:focus, button.
     line-height: 20px;
 }
 .tablacliente{
-    visibility: hidden;
     margin-top: 68px;
 }
 th,td{

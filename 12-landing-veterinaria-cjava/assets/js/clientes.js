@@ -34,8 +34,9 @@ function guardarCliente(){
         mensajealerta.style.color = "#19834e";
         mensajealerta.innerHTML = "Se guardó exitosamente";
         let tablacliente = document.getElementById("tablacliente");
-        tablacliente.style.visibility = "visible";
-        let fila = tablacliente.insertRow(1);
+        tablacliente.hidden = false;
+        let tbodycliente = document.getElementById("tbodycliente");
+        let fila = tbodycliente.insertRow();
         let celda1 = fila.insertCell(0);
         let celda2 = fila.insertCell(1);
         let celda3 = fila.insertCell(2);
@@ -47,18 +48,25 @@ function guardarCliente(){
             nombrecompleto: nombrecompleto.toUpperCase(),
             correo: correo,
         }
-        json = JSON.stringify(cliente);
-
+        
         celda1.innerHTML = cliente.id;
         celda2.innerHTML = cliente.dni;
         celda3.innerHTML = cliente.nombrecompleto;
         celda4.innerHTML = cliente.correo;
+
+        limpiarCliente();
     }
 }
 function limpiarCliente(){
-    document.getElementById("dni").value = "";
+    /*document.getElementById("dni").value = "";
     document.getElementById("nombrecompleto").value = "";
     document.getElementById("correo").value = "";
     let mensajealerta = document.getElementById("mensajealerta");
-    mensajealerta.style.visibility = "hidden";
+    mensajealerta.value = "";*/
+    /*let tablacliente = document.getElementById("tablacliente");
+    tablacliente.hidden = true;
+    let tbodycliente = document.getElementById("tbodycliente");
+    while (tbodycliente.firstChild) {
+        tbodycliente.removeChild(tbodycliente.firstChild);
+    }*/
 }

@@ -30,19 +30,24 @@ function validarInformacion(){
     }else if(!(/^[0-9]{9}$/).test(telefono)){
         console.log("Teléfono inválido, debe ingresar 9 dígitos numéricos");
         mensajealerta.innerHTML = "Teléfono inválido, debe ingresar 9 dígitos numéricos";
-    }else if(nombremascota1 == "" && razamascota1 == "" && edad1 == ""){
+    }else if(nombremascota1 == "" && razamascota1 == "" && edad1 == "" &&
+             nombremascota2 == "" && razamascota2 == "" && edad2 == "" &&
+             nombremascota3 == "" && razamascota3 == "" && edad3 == ""){
         console.log("Debe ingresar los datos de al menos 1 mascota");
         mensajealerta.innerHTML = "Debe ingresar los datos de al menos 1 mascota";
         document.getElementById("nombremascota1").focus();
-    }else if(edad1 != "" && !(/^[0-9]$/).test(parseInt(edad1))){
+    }else if(nombremascota1 == "" || razamascota1 == "" || edad1 == ""){
+        console.log("Para registrar al menos una mascota, complete todos los campos de la mascota 1");
+        mensajealerta.innerHTML = "Para registrar al menos una mascota, complete todos los campos de la mascota 1";
+    }else if(edad1 != "" && !(/^[1-9]\d*$/).test(parseInt(edad1))){
         console.log("Edad inválida, la edad de la mascota debe ser un número");
         mensajealerta.innerHTML = "Edad inválida, la edad de la mascota debe ser un número";
         document.getElementById("edad1").focus();
-    }else if(edad2 != "" && !(/^[0-9]$/).test(parseInt(edad2))){
+    }else if(edad2 != "" && !(/^[1-9]\d*$/).test(parseInt(edad2))){
         console.log("Edad inválida, la edad de la mascota debe ser un número");
         mensajealerta.innerHTML = "Edad inválida, la edad de la mascota debe ser un número";
         document.getElementById("edad2").focus();
-    }else if(edad3 != "" && !(/^[0-9]$/).test(parseInt(edad3))){
+    }else if(edad3 != "" && !(/^[1-9]\d*$/).test(parseInt(edad3))){
         console.log("Edad inválida, la edad de la mascota debe ser un número");
         mensajealerta.innerHTML = "Edad inválida, la edad de la mascota debe ser un número";
         document.getElementById("edad3").focus();
@@ -72,8 +77,9 @@ function guardarInformacion(){
         mensajealerta.style.color = "#19834e";
         mensajealerta.innerHTML = "Se guardó exitosamente";
         let tablainformacion = document.getElementById("tablainformacion");
-        tablainformacion.removeAttribute = "hidden";
-        let fila = tablainformacion.insertRow(1);
+        tablainformacion.hidden = false;
+        let tbodyinformacion = document.getElementById("tbodyinformacion");
+        let fila = tbodyinformacion.insertRow();
         let celda1 = fila.insertCell(0);
         let celda2 = fila.insertCell(1);
         let celda3 = fila.insertCell(2);
@@ -91,7 +97,7 @@ function guardarInformacion(){
         let celda15 = fila.insertCell(14);
         let celda16 = fila.insertCell(15);
 
-        let informacion = {
+        let json = {
             id: ++contadorInformacion,
             nombrecompleto: nombrecompleto.toUpperCase(),
             correo: correo,
@@ -101,45 +107,45 @@ function guardarInformacion(){
                     id: 1,
                     nombremascota: nombremascota1,
                     razamascota: razamascota1,
-                    edad: parseInt(edad1),
+                    edad: edad1,
                 },
                 {
                     id: 2,
                     nombremascota: nombremascota2,
                     razamascota: razamascota2,
-                    edad: parseInt(edad2),
+                    edad: edad2,
                 },
                 {
                     id: 3,
                     nombremascota: nombremascota3,
                     razamascota: razamascota3,
-                    edad: parseInt(edad3),
+                    edad: edad3,
                 }
             ]
         }
-        json = JSON.stringify(informacion);
-
+        
         celda1.innerHTML = json.id;
         celda2.innerHTML = json.nombrecompleto;
         celda3.innerHTML = json.correo;
         celda4.innerHTML = json.telefono;
-        let mascotas = json.mascotas;
-        celda5.innerHTML = mascotas[0].id;
-        celda6.innerHTML = mascotas[0].nombremascota;
-        celda7.innerHTML = mascotas[0].razamascota;
-        celda8.innerHTML = mascotas[0].edad;
-        celda9.innerHTML = mascotas[1].id;
-        celda10.innerHTML = mascotas[1].nombremascota;
-        celda11.innerHTML = mascotas[1].razamascota;
-        celda12.innerHTML = mascotas[1].edad;
-        celda13.innerHTML = mascotas[2].id;
-        celda14.innerHTML = mascotas[2].nombremascota;
-        celda15.innerHTML = mascotas[2].razamascota;
-        celda16.innerHTML = mascotas[2].edad;
+        celda5.innerHTML = json.mascotas[0].id;
+        celda6.innerHTML = json.mascotas[0].nombremascota;
+        celda7.innerHTML = json.mascotas[0].razamascota;
+        celda8.innerHTML = json.mascotas[0].edad;
+        celda9.innerHTML = json.mascotas[1].id;
+        celda10.innerHTML = json.mascotas[1].nombremascota;
+        celda11.innerHTML = json.mascotas[1].razamascota;
+        celda12.innerHTML = json.mascotas[1].edad;
+        celda13.innerHTML = json.mascotas[2].id;
+        celda14.innerHTML = json.mascotas[2].nombremascota;
+        celda15.innerHTML = json.mascotas[2].razamascota;
+        celda16.innerHTML = json.mascotas[2].edad;
+
+        limpiarInformacion();
     }
 }
-function limpiarCliente(){
-    document.getElementById("nombrecompleto").value = "";
+function limpiarInformacion(){
+    /*document.getElementById("nombrecompleto").value = "";
     document.getElementById("correo").value = "";
     document.getElementById("telefono").value = "";
     document.getElementById("nombremascota1").value = "";
@@ -153,5 +159,11 @@ function limpiarCliente(){
     document.getElementById("edad3").value = "";
 
     let mensajealerta = document.getElementById("mensajealerta");
-    mensajealerta.setAttribute = "hidden";
+    mensajealerta.value = "";*/
+    /*let tablainformacion = document.getElementById("tablainformacion");
+    tablainformacion.hidden = true;
+    let tbodyinformacion = document.getElementById("tbodyinformacion");
+    while (tbodyinformacion.firstChild) {
+        tbodyinformacion.removeChild(tbodyinformacion.firstChild);
+    }*/
 }
