@@ -74,8 +74,13 @@ button.form__btn:hover, button.form__btn:active, button.form__btn:focus, button.
     margin-top: 12px;
     line-height: 20px;
 }
+.contenedor_tabla{
+    overflow: auto;
+    width: 100%;
+}
 .tablainformacion{
     margin-top: 68px;
+    width: max-content;
 }
 th,td{
     font-size: 1.8rem;
