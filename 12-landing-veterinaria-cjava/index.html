@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CJava | Veterinaria</title>
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="veterinaria, mascotas, servicios médicos, perros, gatos">
+    <meta name="descripcion" content="Web de veterinaria para la atención de nuestras mascotas mediante una serie de servicios que brindamos a través de nuestro negocio.">
+    <meta name="author" content="Fabiola Jessica Huancollo Chambi">
+    <link rel="shorcut icon" href="./assets/img/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar--titulo">
+            <div class="container-fluid">
+                <h1 class="navbar__nomempresa">CJava: Siempre para apoyarte</h1>
+                <a class="navbar-brand navbar__logo" href="index.html">
+                    <img src="./assets/img/logo.jpg" alt="Logo" width="60" height="50" class="d-inline-block align-text-top navbar__imglogo">
+                </a>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar--menu">
+            <div class="container-fluid">
+              <button class="navbar-toggler navbar__botonmenu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon navbar__iconomenu"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav menu">
+                  <li class="nav-item">
+                    <a class="menu__opcion menu__opcion-seleccionado" href="index.html">INICIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="menu__opcion" href="negocio.html">NEGOCIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="menu__opcion" href="servicios.html">SERVICIOS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="menu__opcion" href="clientes.html">CLIENTES</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="menu__opcion" href="registro.html">REGISTRO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="menu__opcion" href="contactanos.html">CONTÁCTANOS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="menu__opcion" href="creado-por.html">CREADO POR</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <!-- Carousel -->
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="3"></button>
+            </div>
+        
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./assets/img/slide_1.jpg" width="200" height="650" alt="slide 1" class="d-block w-100" data-bs-interval="2000">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/img/slide_2.jpg"  width="200" height="650" alt="slide 2" class="d-block w-100" data-bs-interval="2000">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/img/slide-3.jpg"  width="200" height="650" alt="slide 3" class="d-block w-100" data-bs-interval="2000">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/img/slide_4.jpg"  width="200" height="650" alt="slide 4" class="d-block w-100" data-bs-interval="2000">
+                </div>
+            </div>
+        
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon carousel__iconcontrol"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+                <span class="carousel-control-next-icon carousel__iconcontrol"></span>
+            </button>
+        </div>
+        <section class="section__banners">
+            <p class="lema">Tenemos lo que tu mascota necesita</p>
+            <div class="row banner banner--1">
+                <div class="col-lg-1"></div>
+                <div class="col-12 col-sm-12 col-md-5 col-lg-4">
+                    <img src="./assets/img/imgbanner1.png" class="rounded-start mx-auto d-block" alt="Imagen banner 1" width="290" height="300" >
+                </div>
+                <div class="col-12 col-sm-12 col-md-7 col-lg-6">
+                    <div class="banner__contenido">
+                        <h4 class="banner__titulo">MEDICINA VETERINARIA</h4>
+                        <div class="banner__grupocontenido">
+                            <div class="banner__bloque">
+                                <p class="banner_texto">Consultas</p>
+                                <p class="banner_texto">Cirugías</p>
+                            </div>
+                            <div class="banner__bloque">
+                                <p class="banner_texto">Vacunas</p>
+                            </div>
+                            <div class="banner__bloque">
+                                <p class="banner_texto">Tratamientos</p>
+                                <p class="banner_texto">Emergencias</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+            <div class="row banner  banner--2">
+                <div class="col-lg-1"></div>
+                <div class="col-12 col-sm-12 col-md-7 col-lg-6">
+                    <div class="banner__contenido">
+                        <h4 class="banner__titulo">OTROS SERVICIOS</h4>
+                        <div class="banner__grupocontenido">
+                            <div class="banner__bloque">
+                                <p class="banner_texto">Baño Spa</p>
+                                <p class="banner_texto">Venta de Accesorios </p>
+                            </div>
+                            <div class="banner__bloque">
+                                <p class="banner_texto">Medicados</p>
+                            </div>
+                            <div class="banner__bloque">
+                                <p class="banner_texto">Guardería</p>
+                                <p class="banner_texto">Corte</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-5 col-lg-4">
+                    <img src="./assets/img/imgbanner4.png" class="img-fluid rounded-start mx-auto d-block" alt="Imagen banner 2" width="300" height="320" >
+                </div>
+                <div class="col-lg-1"></div>
+            </div>            
+        </section>
+        <section class="section__pqelegirnos">
+            <p class="lema">¿Por qué elegirnos?</p>
+            <div class="pqelegirnos__grupo">
+                <article class="pqelegirnos__card">
+                    <img src="./assets/img/experiencia.png" alt="Imagen sobre experiencia" width="80" height="50" class="d-inline-block align-text-top pqelegirnos__img">
+                    <p class="pqelegirnos__texto">Contamos con médicos veterinarios residentes, expertos y reconocidos en el rubro veterinario a nivel nacional e internacional por su trayectoria.</p>
+                </article>
+                <article class="pqelegirnos__card">
+                    <img src="./assets/img/huella.png" alt="Imagen sobre servicios" width="80" height="50" class="d-inline-block align-text-top pqelegirnos__img">
+                    <p class="pqelegirnos__texto">Realizamos tratamientos especializados para lograr el bienestar de la mascota y mejorar su calidad de vida. De acuerdo a, la necesidad de nuestros pacientes y de sus familias.</p>
+                </article>
+                <article class="pqelegirnos__card">
+                    <img src="./assets/img/trabajo_equipo.png" alt="Imagen sobre trabajo en equipo" width="80" height="50" class="d-inline-block align-text-top pqelegirnos__img">
+                    <p class="pqelegirnos__texto">Nuestro equipo humano trabaja íntegramente para buscar soluciones beneficiosas en pro de la salud de nuestros pacientes y la tranquilidad de sus familias que confían en nosotros.</p>
+                </article>
+            </div>
+        </section>
+        <section class="section__blog">
+            <p class="lema">Visita nuestro blog</p>
+            <div class="blog__grupo">
+                <article class="blog__card">
+                    <img src="./assets/img/blog1.png" alt="Imagen sobre blog 1" width="80" height="50" class="d-inline-block align-text-top blog__img">
+                    <p class="blog__titulo">Cómo acudir con tu gato al veterinario</p>
+                    <p class="blog__texto">El momento de llevar al gato al veterinario puede ser temido por mucha gente.  Es una situación que puede volverse estresante para el animal y ...</p>
+                    <button type="button" class="btn btn-lg blog__btn">Leer Más</button>
+                </article>
+                <article class="blog__card">
+                    <img src="./assets/img/blog2.png" alt="Imagen sobre blog 2" width="80" height="50" class="d-inline-block align-text-top blog__img">
+                    <p class="blog__titulo">Plantas tóxicas para perros y gatos</p>
+                    <p class="blog__texto">El momento de llevar al gato al veterinario puede ser temido por mucha gente.  Es una situación que puede volverse estresante para el animal y ...</p>
+                    <button type="button" class="btn btn-lg blog__btn">Leer Más</button>
+                </article>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__grupo">
+                <div class="footer__bloque">
+                    <a href="index.html">
+                        <img src="./assets/img/logo.jpg" alt="Imagen del logo de la empresa" width="180" height="100" class="d-inline-block align-text-top footer__logo">
+                    </a>
+                    <div class="footer__bloqueredes">
+                        <p class="footer__texto">Síguenos en:</p>
+                        <figure class="footer__redes">
+                            <a href="#">
+                                <img src="./assets/img/icon_facebook.png" alt="Imagen de Facebook" width="30" height="30" class="d-inline-block align-text-top footer__red">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/icon_x.png" alt="Imagen de X" width="30" height="30" class="d-inline-block align-text-top footer__red">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/icon_youtube.png" alt="Imagen de Youtube" width="30" height="30" class="d-inline-block align-text-top footer__red">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="footer__bloque">
+                    <p class="footer__titulo">ACCESOS DIRECTOS</p>
+                    <ul class="footer__listaaccesos">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ff2d2d" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                            </svg>
+                            <a href="negocio.html" class="footer__accesodirecto">NEGOCIO</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ff2d2d" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                            </svg>
+                            <a href="servicios.html" class="footer__accesodirecto">SERVICIOS</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ff2d2d" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                            </svg>
+                            <a href="clientes.html" class="footer__accesodirecto">CLIENTES</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ff2d2d" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                            </svg>
+                            <a href="registro.html" class="footer__accesodirecto">REGISTRO</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ff2d2d" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                            </svg>
+                            <a href="contactanos.html" class="footer__accesodirecto">CONTÁCTANOS</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ff2d2d" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                            </svg>
+                            <a href="creado-por.html" class="footer__accesodirecto">CREADO POR</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__bloque">
+                    <p class="footer__titulo">CONTÁCTANOS</p>
+                    <ul class="footer__listadatos">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ff2d2d" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                            </svg>
+                            <span class="footer__texto">Arenales #213 Lince</span>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ff2d2d" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                            </svg>
+                            <span class="footer__texto">+51 908 221 100</span></li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ff2d2d" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                            </svg>
+                            <span class="footer__texto">info@cjava.com</span>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ff2d2d" class="bi bi-clock-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                            </svg>
+                            <span class="footer__texto">
+                                Lunes a viernes : 09:00am a 5:30pm
+                                <br>
+                                Sábado: 09:00am a 2:00pm
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__author">
+                <p class="footer__texto footer__texto-nomauthor">2024. Desarrollado por Huancollo Chambi Fabiola Jessica</p>
+            </div>
+        </footer>
+        <a href="#">
+            <img src="./assets/img/icon_whatsapp.png" alt="Imagen de Whatsapp" width="60" height="60" class="d-inline-block align-text-top footer__btnwb" title="Enviar mensaje">
+        </a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
