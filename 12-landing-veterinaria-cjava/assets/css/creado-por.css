@@ -1,0 +1,55 @@
+.portada__img{
+    width: 100%;
+    max-height: 685.5px;
+}
+.section__creadopor, .section__equipo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.creadopor__lema{
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #ff2d2d;
+}
+.equipo__grupo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.equipo__grupo-developer{
+    margin-bottom: 3rem;
+}
+.equipo__card{
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 288px;
+    border: 0.2rem solid black;
+    min-height: 350px;
+}
+.equipo__img{
+    width: 250px;
+    height: 250px;
+    padding: 16px;
+}
+.equipo__nombre{
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.equipo__cargo{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
