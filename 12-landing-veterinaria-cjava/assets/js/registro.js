@@ -105,20 +105,20 @@ function guardarInformacion(){
             mascotas: [
                 {
                     id: 1,
-                    nombremascota: nombremascota1,
-                    razamascota: razamascota1,
+                    nombremascota: nombremascota1.toUpperCase(),
+                    razamascota: razamascota1.toUpperCase(),
                     edad: edad1,
                 },
                 {
                     id: 2,
-                    nombremascota: nombremascota2,
-                    razamascota: razamascota2,
+                    nombremascota: nombremascota2.toUpperCase(),
+                    razamascota: razamascota2.toUpperCase(),
                     edad: edad2,
                 },
                 {
                     id: 3,
-                    nombremascota: nombremascota3,
-                    razamascota: razamascota3,
+                    nombremascota: nombremascota3.toUpperCase(),
+                    razamascota: razamascota3.toUpperCase(),
                     edad: edad3,
                 }
             ]
