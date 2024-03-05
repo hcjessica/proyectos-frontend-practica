@@ -79,3 +79,9 @@ Cloning web "Wikipedia"
 Design of a landing using Bootstrap and Flexbox
 
 ![Project 11](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project11-1.png)
+
+## 12. Landing about a business: "Veterinaria of CJava" 
+
+Design of a landing using Bootstrap and Flexbox and JS. This is a practice and It's very similar to project 11.
+
+![Project 11](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project12-1.png)
