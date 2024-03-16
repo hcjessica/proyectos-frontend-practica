@@ -64,7 +64,7 @@
                         <th class="alumnos__cabecera">Teléfono</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody #tbodyAlumno id="tbodyAlumno">
                     <tr *ngFor="let alumno of alumnos"><!--form reactivo-->
                         <td>{{alumno.id}}</td>
                         <td>{{alumno.nombres}}</td>
