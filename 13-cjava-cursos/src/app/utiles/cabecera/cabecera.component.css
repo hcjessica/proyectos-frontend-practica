@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+/*Barra de título y menú*/
+.navbar--titulo{
+    background-color: #17161a;
+}
+.navbar__nomempresa{
+    margin-left: 1.5rem;
+    padding: 2px 0;
+    font-size: 1.8rem;
+    color: white;
+}
+.navbar__logo{
+    
+}
+.navbar__imglogo{
+    
+}
+.navbar--menu{
+    background-color: #ff2d2d;
+}
+.navbar__botonmenu{
+    background-color: #fff;
+    padding: 5px;
+    margin: 8px;
+}
+.navbar__iconomenu{
+    height: 1.8rem;
+    width: 2rem;
+}
+.menu{
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 8px 0;
+}
+.menu__opcion{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: white;
+    text-decoration: none;
+}
+.menu__opcion:hover:active:visited:focus{
+    color: white;
+}
+.menu__opcion-seleccionado{
+    color: #17161a;
+}
