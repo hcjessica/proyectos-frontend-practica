@@ -1,0 +1,81 @@
+<div class="main">
+    <section>
+        <img src="/assets/img/alumnos.jpg" class="img-fluid portada__img" alt="Portada para alumnos">
+    </section>
+    <section class="section__formulario" [hidden]="hiddenForm">
+        <form class="form_grupo" (ngSubmit)="guardarAlumno()" #alumnoForm="ngForm">
+            <p class="form__titulo">REGISTRO</p>
+            <div class="form__bloque">
+                <p class="form__texto">
+                    Id
+                    <span> *</span>
+                </p>
+                <input type="number" name="id" id="id" class="form-control form__campo" readonly disabled required [(ngModel)]="modeloAlumno.id">
+                <p class="form__texto">
+                    Nombres
+                    <span> *</span>
+                </p>
+                <input type="text" name="nombres" id="nombres" class="form-control form__campo" required [(ngModel)]="modeloAlumno.nombres">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoNombre">Campo inválido</p>
+                <p class="form__texto">
+                    Apellidos
+                    <span> *</span>
+                </p>
+                <input type="text" name="apellidos" id="apellidos" class="form-control form__campo" required [(ngModel)]="modeloAlumno.apellidos">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoApellidos">Campo inválido</p>
+                <p class="form__texto">
+                    Fecha Nac.
+                </p>
+                <input type="date" name="fecnacimiento" id="fecnacimiento" class="form-control form__campo" [(ngModel)]="modeloAlumno.fecnac">
+                <p class="form__texto">
+                    Dirección
+                </p>
+                <input type="text" name="direccion" id="direccion" class="form-control form__campo" [(ngModel)]="modeloAlumno.direccion">
+                <p class="form__texto">
+                    Correo
+                    <span> *</span>
+                </p>
+                <input type="email" name="correo" id="correo" class="form-control form__campo form__campo-correoelectronico" required [(ngModel)]="modeloAlumno.correo">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoCorreo">Campo inválido</p>
+                <p class="form__texto">
+                    Teléfono
+                    <span> *</span>
+                </p>
+                <input type="number" name="telefono" id="telefono" class="form-control form__campo" maxlength="9" required [(ngModel)]="modeloAlumno.telefono">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoTelefono">Campo inválido</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary form__btn" type="button" (click)="guardarAlumno()">GUARDAR</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="section__alumnos">
+        <a class="btn alumnos__boton" (click)="crearAlumno()"  [hidden]="hiddenBtnCrear">CREAR</a>
+        <div class="alumnos__contenedorTabla" [hidden]="hiddenTablaAlumnos">
+            <table class="table table-hover table-light table-bordered alumnos__tabla" id="tablaalumno">
+                <thead>
+                    <tr>
+                        <th class="alumnos__cabecera">Id</th>
+                        <th class="alumnos__cabecera">Nombres</th>
+                        <th class="alumnos__cabecera">Apellidos</th>
+                        <th class="alumnos__cabecera">Fecha Nac.</th>
+                        <th class="alumnos__cabecera">Dirección</th>
+                        <th class="alumnos__cabecera">Correo</th>
+                        <th class="alumnos__cabecera">Teléfono</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let alumno of alumnos"><!--form reactivo-->
+                        <td>{{alumno.id}}</td>
+                        <td>{{alumno.nombres}}</td>
+                        <td>{{alumno.apellidos}}</td>
+                        <td>{{alumno.fecnac}}</td>
+                        <td>{{alumno.direccion}}</td>
+                        <td>{{alumno.correo}}</td>
+                        <td>{{alumno.telefono}}</td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
