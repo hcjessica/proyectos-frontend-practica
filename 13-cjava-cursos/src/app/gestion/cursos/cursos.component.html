@@ -3,8 +3,8 @@
         <img src="/assets/img/cursos.jpg" class="img-fluid portada__img" alt="Portada para cursos">
     </section>
     <section class="section__formulario" [hidden]="hiddenForm">
-        <a class="btn cursos__boton" (click)="cancelarRegistro()"  [hidden]="hiddenBtnCancelar">CANCELAR</a>
-        <form class="form_grupo" (ngSubmit)="guardarCurso()" #cursoForm="ngForm">
+        <a class="btn cursos__boton" (click)="cancelarRegistro()" [hidden]="hiddenBtnCancelar">CANCELAR</a>
+        <form class="form_grupo" #cursoForm="ngForm">
             <p class="form__titulo">REGISTRO</p>
             <div class="form__bloque">
                 <p class="form__texto">

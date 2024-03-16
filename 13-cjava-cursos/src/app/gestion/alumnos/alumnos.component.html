@@ -4,7 +4,7 @@
     </section>
     <section class="section__formulario" [hidden]="hiddenForm">
         <a class="btn alumnos__boton" (click)="cancelarRegistro()"  [hidden]="hiddenBtnCancelar">CANCELAR</a>
-        <form class="form_grupo" (ngSubmit)="guardarAlumno()" #alumnoForm="ngForm">
+        <form class="form_grupo" #alumnoForm="ngForm">
             <p class="form__titulo">REGISTRO</p>
             <div class="form__bloque">
                 <p class="form__texto">
