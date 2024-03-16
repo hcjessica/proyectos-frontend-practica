@@ -1,0 +1,120 @@
+<div class="main">
+    <section>
+        <img src="/assets/img/matricula.jpg" class="img-fluid portada__img" alt="Portada para matrícula">
+    </section>
+    <section class="section__formulario" [hidden]="hiddenForm">
+        <a class="btn matriculas__boton" (click)="cancelarRegistro()"  [hidden]="hiddenBtnCancelar">CANCELAR</a>
+        <form class="form_grupo" #cursoForm="ngForm">
+            <p class="form__titulo">REGISTRO</p>
+            <div class="form__bloque">
+                <p class="form__texto">
+                    Id
+                    <span> *</span>
+                </p>
+                <input type="number" name="id" id="id" class="form-control form__campo" readonly disabled required [(ngModel)]="modeloMatricula.id">
+                <p class="form__texto">
+                    Alumno
+                    <span> *</span>
+                </p>
+                <select class="form-select form__campo" name="alumno" id="alumno" #campoAlumno required [(ngModel)]="modeloMatricula.idAlumno" (change)="obtenerDatosAlumno()">
+                    <option *ngFor="let alumno of alumnos" [value]="alumno.id">{{alumno.apellidos + ' ' + alumno.nombres}}</option>
+                </select>
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoAlumno">Campo inválido</p>
+                <!--Datos de alumno-->
+                <p class="form__texto">
+                    Nombres
+                </p>
+                <input type="text" name="nombres" id="nombres" class="form-control form__campo" disabled readonly [value]="nombres">
+                <p class="form__texto">
+                    Apellidos
+                </p>
+                <input type="text" name="apellidos" id="apellidos" class="form-control form__campo" disabled readonly [value]="apellidos">
+                <p class="form__texto">
+                    Fecha Nac.
+                </p>
+                <input type="date" name="fecnacimiento" id="fecnacimiento" class="form-control form__campo" disabled readonly [value]="fecnac">
+                <p class="form__texto">
+                    Dirección
+                </p>
+                <input type="text" name="direccion" id="direccion" class="form-control form__campo" disabled readonly [value]="direccion">
+                <p class="form__texto">
+                    Correo
+                </p>
+                <input type="email" name="correo" id="correo" class="form-control form__campo form__campo-correoelectronico" disabled readonly [value]="correo">
+                <p class="form__texto">
+                    Teléfono
+                </p>
+                <input type="number" name="telefono" id="telefono" class="form-control form__campo" maxlength="9" disabled readonly [value]="telefono">
+                <!---->
+                <p class="form__texto">
+                    Curso
+                    <span> *</span>
+                </p>
+                <select class="form-select form__campo" name="curso" id="curso" #campoCurso required [(ngModel)]="modeloMatricula.idCurso" (change)="obtenerDatosCurso()">
+                    <option *ngFor="let curso of cursos" [value]="curso.id">{{curso.nombre}}</option>
+                </select>
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoCurso">Campo inválido</p>
+                <!--Datos del curso-->
+                <p class="form__texto">
+                    Nombre del curso
+                </p>
+                <input type="text" name="nombre" id="nombre" class="form-control form__campo" disabled readonly [value]="nombre">
+                <p class="form__texto">
+                    Horas
+                </p>
+                <input type="number" name="horas" id="horas" min="1" max="24" class="form-control form__campo" disabled readonly [value]="horas">
+                <p class="form__texto">
+                    Créditos
+                </p>
+                <input type="number" name="creditos" id="creditos" min="0" max="5" class="form-control form__campo" disabled readonly [value]="creditos">
+                <p class="form__texto">
+                    Categoría del curso
+                </p>
+                <input type="text" name="categoria" id="categoria" class="form-control form__campo" disabled readonly [value]="descripCategoria">
+                <!---->
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary form__btn" type="button" (click)="guardarMatricula()">GUARDAR</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="section__matriculas">
+        <a class="btn matriculas__boton" (click)="crearMatricula()"  [hidden]="hiddenBtnCrear">CREAR</a>
+        <div class="matriculas__contenedorTabla" [hidden]="hiddenTablaMatriculas">
+            <table class="table table-hover table-light table-bordered matriculas__tabla" id="tablamatricula">
+                <thead>
+                    <tr>
+                        <th class="matriculas__cabecera">Id</th>
+                        <th class="matriculas__cabecera">Nombres</th>
+                        <th class="matriculas__cabecera">Apellidos</th>
+                        <th class="matriculas__cabecera">Fecha Nac.</th>
+                        <th class="matriculas__cabecera">Dirección</th>
+                        <th class="matriculas__cabecera">Correo</th>
+                        <th class="matriculas__cabecera">Teléfono</th>
+                        <th class="matriculas__cabecera">Nombre del curso</th>
+                        <th class="matriculas__cabecera">Horas</th>
+                        <th class="matriculas__cabecera">Créditos</th>
+                        <th class="matriculas__cabecera">Categoría</th>
+                    </tr>
+                </thead>
+                <tbody #tbodyMatricula id="tbodyMatricula">
+                    <tr *ngFor="let matricula of matriculas"><!--form reactivo-->
+                        <td>{{matricula.id}}</td>
+                        <td *ngIf="matricula.idAlumno !== undefined">{{alumnos[matricula.idAlumno - 1 ].nombres}}</td>
+                        <td *ngIf="matricula.idAlumno !== undefined">{{alumnos[matricula.idAlumno - 1 ].apellidos}}</td>
+                        <td *ngIf="matricula.idAlumno !== undefined">{{alumnos[matricula.idAlumno - 1 ].fecnac}}</td>
+                        <td *ngIf="matricula.idAlumno !== undefined">{{alumnos[matricula.idAlumno - 1 ].direccion}}</td>
+                        <td *ngIf="matricula.idAlumno !== undefined">{{alumnos[matricula.idAlumno - 1 ].correo}}</td>
+                        <td *ngIf="matricula.idAlumno !== undefined">{{alumnos[matricula.idAlumno - 1 ].telefono}}</td>
+                        <td *ngIf="matricula.idCurso !== undefined">{{cursos[matricula.idCurso - 1 ].nombre}}</td>
+                        <td *ngIf="matricula.idCurso !== undefined">{{cursos[matricula.idCurso - 1 ].horas}}</td>
+                        <td *ngIf="matricula.idCurso !== undefined">{{cursos[matricula.idCurso - 1 ].creditos}}</td>
+                        <td *ngIf="matricula.idCurso !== undefined && cursos[matricula.idCurso - 1 ].categoria === 1">software</td>
+                        <td *ngIf="matricula.idCurso !== undefined && cursos[matricula.idCurso - 1 ].categoria === 2">gestión</td>
+                        <td *ngIf="matricula.idCurso !== undefined && cursos[matricula.idCurso - 1 ].categoria === 3">otros</td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
