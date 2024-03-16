@@ -43,7 +43,6 @@ export class AlumnosComponent {
   ];
 
   crearAlumno(){
-    console.log("crear alumno");
     this.hiddenForm = false;
     this.hiddenBtnCrear = true;
     this.hiddenTablaAlumnos = true;
@@ -51,30 +50,60 @@ export class AlumnosComponent {
   }
   guardarAlumno(){
     if(this.validarDatosAlumno()){
+      this.alumnos.push({id: this.modeloAlumno.id, nombres: this.modeloAlumno.nombres, apellidos: this.modeloAlumno.apellidos, fecnac: this.modeloAlumno.fecnac, direccion: this.modeloAlumno.direccion, correo: this.modeloAlumno.correo, telefono: this.modeloAlumno.telefono});
+
+      this.limpiarFormAlumno();
       
+      this.hiddenForm = true;
+      this.hiddenBtnCrear = false;
+      this.hiddenTablaAlumnos = false;
+
+      alert("Se ha registrado el alumno exitosamente");
+      
+      //console.log(this.alumnos);
     }
   }
   validarDatosAlumno(){
-    let rpsta = false;
+    let rpsta = true;
+    this.hiddenCampoNombre = true;
+    this.hiddenCampoApellidos = true;
+    this.hiddenCampoCorreo = true;
+    this.hiddenCampoTelefono = true;
+
     if(!this.modeloAlumno.nombres){
       this.hiddenCampoNombre = false;
       alert("Brinde el nombre del alumno");
+      rpsta = false;
     }else if(!this.modeloAlumno.apellidos){
       this.hiddenCampoApellidos = false;
       alert("Brinde los apellidos del alumno");
+      rpsta = false;
     }else if(!this.modeloAlumno.correo){
       this.hiddenCampoCorreo = false;
       alert("Brinde el correo del alumno");
+      rpsta = false;
     }else if(!this.modeloAlumno.telefono){
       this.hiddenCampoTelefono = false;
       alert("Brinde el teléfono del alumno");
+      rpsta = false;
     }else if(!(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i).test(this.modeloAlumno.correo)){
       this.hiddenCampoCorreo = false;
       alert("Correo electrónico inválido, debe ingresar un correo");
+      rpsta = false;
     }else if(!(/^[0-9]{9}$/).test(this.modeloAlumno.telefono)){
       this.hiddenCampoTelefono = false;
       alert("Teléfono inválido, debe ingresar 9 dígitos numéricos");
+      rpsta = false;
     }
     return rpsta;
+  }
+  limpiarFormAlumno(){
+    this.modeloAlumno.id = this.alumnos.length + 1;
+    this.modeloAlumno.nombres = "";
+    this.modeloAlumno.apellidos = "";
+    this.modeloAlumno.fecnac = "";
+    this.modeloAlumno.direccion = "";
+    this.modeloAlumno.correo = "";
+    this.modeloAlumno.telefono = "";
   }
 }
