@@ -3,6 +3,7 @@
         <img src="/assets/img/alumnos.jpg" class="img-fluid portada__img" alt="Portada para alumnos">
     </section>
     <section class="section__formulario" [hidden]="hiddenForm">
+        <a class="btn alumnos__boton" (click)="cancelarRegistro()"  [hidden]="hiddenBtnCancelar">CANCELAR</a>
         <form class="form_grupo" (ngSubmit)="guardarAlumno()" #alumnoForm="ngForm">
             <p class="form__titulo">REGISTRO</p>
             <div class="form__bloque">

@@ -14,6 +14,7 @@ import { PieComponent } from '../../utiles/pie/pie.component';
 })
 export class AlumnosComponent {
   //valores poir default
+  hiddenBtnCancelar = true;
   hiddenForm = true;
   hiddenBtnCrear = false;
   hiddenTablaAlumnos = false;
@@ -43,10 +44,18 @@ export class AlumnosComponent {
   ];
 
   crearAlumno(){
+    this.hiddenBtnCancelar = false;
     this.hiddenForm = false;
     this.hiddenBtnCrear = true;
     this.hiddenTablaAlumnos = true;
     this.modeloAlumno.id = this.alumnos.length + 1;
+  }
+  cancelarRegistro(){
+    this.hiddenBtnCancelar = true;
+    this.hiddenForm = true;
+    this.hiddenBtnCrear = false;
+    this.hiddenTablaAlumnos = false;
+    this.limpiarFormAlumno();
   }
   guardarAlumno(){
     if(this.validarDatosAlumno()){

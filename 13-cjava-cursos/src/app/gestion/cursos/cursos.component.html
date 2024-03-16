@@ -1,1 +1,74 @@
-<p>cursos works!</p>
+<div class="main">
+    <section>
+        <img src="/assets/img/cursos.jpg" class="img-fluid portada__img" alt="Portada para cursos">
+    </section>
+    <section class="section__formulario" [hidden]="hiddenForm">
+        <a class="btn cursos__boton" (click)="cancelarRegistro()"  [hidden]="hiddenBtnCancelar">CANCELAR</a>
+        <form class="form_grupo" (ngSubmit)="guardarCurso()" #cursoForm="ngForm">
+            <p class="form__titulo">REGISTRO</p>
+            <div class="form__bloque">
+                <p class="form__texto">
+                    Id
+                    <span> *</span>
+                </p>
+                <input type="number" name="id" id="id" class="form-control form__campo" readonly disabled required [(ngModel)]="modeloCurso.id">
+                <p class="form__texto">
+                    Nombre del curso
+                    <span> *</span>
+                </p>
+                <input type="text" name="nombre" id="nombre" class="form-control form__campo" required [(ngModel)]="modeloCurso.nombre">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoNombre">Campo inválido</p>
+                <p class="form__texto">
+                    Horas
+                    <span> *</span>
+                </p>
+                <input type="number" name="horas" id="horas" min="1" max="24" class="form-control form__campo" required [(ngModel)]="modeloCurso.horas">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoHoras">Campo inválido</p>
+                <p class="form__texto">
+                    Créditos
+                    <span> *</span>
+                </p>
+                <input type="number" name="creditos" id="creditos" min="0" max="5" class="form-control form__campo" required [(ngModel)]="modeloCurso.creditos">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoCreditos">Campo inválido</p>
+                <p class="form__texto">
+                    Categoría
+                    <span> *</span>
+                </p>
+                <select class="form-select form__campo" name="categoria" id="categoria" required [(ngModel)]="modeloCurso.categoria">
+                    <option *ngFor="let categoria of arrayCategoria | keyvalue" [value]="categoria.key">{{categoria.value}}</option>
+                </select>
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoCategoria">Campo inválido</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary form__btn" type="button" (click)="guardarCurso()">GUARDAR</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="section__cursos">
+        <a class="btn cursos__boton" (click)="crearCurso()"  [hidden]="hiddenBtnCrear">CREAR</a>
+        <div class="cursos__contenedorTabla" [hidden]="hiddenTablaCursos">
+            <table class="table table-hover table-light table-bordered cursos__tabla" id="tablacurso">
+                <thead>
+                    <tr>
+                        <th class="cursos__cabecera">Id</th>
+                        <th class="cursos__cabecera">Nombre</th>
+                        <th class="cursos__cabecera">Horas</th>
+                        <th class="cursos__cabecera">Créditos</th>
+                        <th class="cursos__cabecera">Categoría</th>
+                    </tr>
+                </thead>
+                <tbody #tbodyCurso id="tbodyCurso">
+                    <tr *ngFor="let curso of cursos"><!--form reactivo-->
+                        <td>{{curso.id}}</td>
+                        <td>{{curso.nombre}}</td>
+                        <td>{{curso.horas}}</td>
+                        <td>{{curso.creditos}}</td>
+                        <td *ngIf="curso.categoria == 1" >software</td>
+                        <td *ngIf="curso.categoria == 2" >gestión</td>
+                        <td *ngIf="curso.categoria == 3" >otros</td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
