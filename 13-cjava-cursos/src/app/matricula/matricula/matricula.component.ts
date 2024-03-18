@@ -172,6 +172,5 @@ export class MatriculaComponent {
     this.horas = undefined;
     this.creditos = undefined;
     this.descripCategoria = "";
-     
   }
 }

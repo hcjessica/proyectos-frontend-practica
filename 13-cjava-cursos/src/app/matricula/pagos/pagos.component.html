@@ -1,1 +1,77 @@
-<p>pagos works!</p>
+<div class="main">
+    <section class="section__formulario" [hidden]="hiddenForm">
+        <a class="btn pagos__boton" (click)="cancelarRegistro()" [hidden]="hiddenBtnCancelar">CANCELAR</a>
+        <form class="form_grupo" #cursoForm="ngForm">
+            <p class="form__titulo">REGISTRO</p>
+            <div class="form__bloque">
+                <p class="form__texto">
+                    Id
+                    <span> *</span>
+                </p>
+                <input type="number" name="id" id="id" class="form-control form__campo" readonly disabled required [(ngModel)]="modeloPago.id">
+                <p class="form__texto">
+                    Nro. Tarjeta
+                    <span> *</span>
+                </p>
+                <input type="text" name="nrotarjeta" id="nrotarjeta" class="form-control form__campo" required [(ngModel)]="modeloPago.nroTarjeta" maxlength="19" (ngModelChange)="modeloPago.nroTarjeta = formatoTarjeta($event)">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoNroTarjeta">Campo inválido</p>
+                <p class="form__texto">
+                    Fecha Exp.
+                    <span> *</span>
+                </p>
+                <input type="month" name="fechaexpiracion" class="form-control form__campo" required [(ngModel)]="modeloPago.fechaExpiracion">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoFechaExp">Campo inválido</p>
+                <p class="form__texto">
+                    Titular
+                    <span> *</span>
+                </p>
+                <input type="text" name="titular" id="titular" class="form-control form__campo" required [(ngModel)]="modeloPago.titular">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoTitular">Campo inválido</p>
+                <p class="form__texto">
+                    Cod. Seguridad
+                    <span> *</span>
+                </p>
+                <input type="password" name="codseguridad" id="codseguridad" class="form-control form__campo" required [(ngModel)]="modeloPago.codSeguridad" maxlength="3">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoCodSeguridad">Campo inválido</p>
+                <p class="form__texto">
+                    Nro. Cuotas
+                    <span> *</span>
+                </p>
+                <select class="form-select form__campo" name="nrocuotas" id="nrocuotas" required [(ngModel)]="modeloPago.nroCuotas">
+                    <option *ngFor="let cuota of arrayCuotas | keyvalue" [value]="cuota.key">{{cuota.value}}</option>
+                </select>
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoNroCuotas">Campo inválido</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary form__btn" type="button" (click)="guardarPago()">GUARDAR</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="section__pagos">
+        <a class="btn pagos__boton" (click)="crearPago()"  [hidden]="hiddenBtnCrear">CREAR</a>
+        <div class="pagos__contenedorTabla" [hidden]="hiddenTablaPagos">
+            <table class="table table-hover table-light table-bordered pagos__tabla" id="tablapago">
+                <thead>
+                    <tr>
+                        <th class="pagos__cabecera">Id</th>
+                        <th class="pagos__cabecera">Nro. Tarjeta</th>
+                        <th class="pagos__cabecera">Fecha Exp.</th>
+                        <th class="pagos__cabecera">Titular</th>
+                        <th class="pagos__cabecera">Cod. Seguridad</th>
+                        <th class="pagos__cabecera">Nro. Cuotas</th>
+                    </tr>
+                </thead>
+                <tbody #tbodyPago id="tbodyPago">
+                    <tr *ngFor="let pago of pagos"><!--form reactivo-->
+                        <td>{{pago.id}}</td>
+                        <td *ngIf="pago.nroTarjeta !== undefined">{{formatoTarjeta(pago.nroTarjeta)}}</td>
+                        <td>{{pago.fechaExpiracion}}</td>
+                        <td>{{pago.titular}}</td>
+                        <td>{{pago.codSeguridad}}</td>
+                        <td *ngIf="pago.nroCuotas !== undefined" >{{arrayCuotas[pago.nroCuotas]}}</td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
