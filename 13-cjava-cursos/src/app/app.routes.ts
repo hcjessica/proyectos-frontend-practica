@@ -3,6 +3,7 @@ import { InicioComponent } from './principal/inicio/inicio.component';
 import { AlumnosComponent } from './gestion/alumnos/alumnos.component';
 import { CursosComponent } from './gestion/cursos/cursos.component';
 import { MatriculaComponent } from './matricula/matricula/matricula.component'; 
+import { PagosComponent } from './matricula/pagos/pagos.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -10,4 +11,5 @@ export const routes: Routes = [
     { path: 'alumnos', component: AlumnosComponent},
     { path: 'cursos', component: CursosComponent},
     { path: 'matriculas', component: MatriculaComponent},
+    { path: 'pagos', component: PagosComponent}
 ];

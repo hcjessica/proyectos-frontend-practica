@@ -63,9 +63,7 @@
                         <td>{{curso.nombre}}</td>
                         <td>{{curso.horas}}</td>
                         <td>{{curso.creditos}}</td>
-                        <td *ngIf="curso.categoria == 1" >software</td>
-                        <td *ngIf="curso.categoria == 2" >gestión</td>
-                        <td *ngIf="curso.categoria == 3" >otros</td>
+                        <td *ngIf="curso.categoria !== undefined" >{{arrayCategoria[curso.categoria]}}</td>
                       </tr>
                 </tbody>
             </table>
