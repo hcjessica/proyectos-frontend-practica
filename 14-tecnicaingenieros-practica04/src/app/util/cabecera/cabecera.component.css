@@ -1,0 +1,85 @@
+/*Barra de título y menú*/
+.navbar--titulo{
+    background-color: #1b76c3;
+}
+.navbar__nomempresa{
+    margin-left: 1.5rem;
+    padding: 2px 0;
+    font-size: 2.6rem;
+    color: white;
+}
+.navbar__logo{
+    
+}
+.navbar__imglogo{
+    
+}
+.navbar--menu{
+    background-color: #16204c;
+}
+.navbar__contenedor{
+    padding: 0;
+}
+.navbar__btnsalir{
+    width: fit-content;
+    height: 31px;
+    margin: 11px 8px;
+    padding: 0 8px;
+    background: white;
+    color: black;
+    font-size: 1.8rem;
+}
+.navbar__btnsalir:hover{
+    background: #1b76c3;
+    color: white;
+}
+.navbar__botonmenu{
+    background-color: #fff;
+    padding: 5px;
+    margin: 8px;
+}
+.navbar__iconomenu{
+    height: 1.8rem;
+    width: 2rem;
+}
+.menu{
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 8px 0;
+}
+.menu__li{
+    padding: 6px 0;
+}
+.menu__opcion{
+    padding-left: 8px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: white;
+    text-decoration: none;
+}
+a.menu__opcion:hover::after{
+    color: #1b76c3;
+}
+a.menu__opcion-seleccionado{
+    color: #1b76c3;
+}
+a.menu__opcion-seleccionado:hover{
+    color: white;
+}
+.menu__opciones{
+    min-width: 210px;
+    border-radius: 0;
+}
+.menu__link{
+    padding: 6px 12px;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    color: black;
+    text-decoration: none;
+    border-bottom: 0.1px solid;
+}
+.menu__link:hover{
+    background-color: #1b76c3;
+    color: white;
+}
