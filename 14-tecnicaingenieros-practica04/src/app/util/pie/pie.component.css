@@ -1,0 +1,21 @@
+.footer{
+}
+.footer__texto{
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+}
+.footer__author{
+    padding: 10px 0;
+    background-color: black;
+}
+.footer__texto-nomauthor{
+    text-align: center;
+    font-size: 1.4rem;
+}
+.footer__btnwb{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+}

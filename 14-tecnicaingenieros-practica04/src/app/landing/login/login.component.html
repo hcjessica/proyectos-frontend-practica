@@ -1,0 +1,43 @@
+<header>
+    <nav class="navbar navbar--titulo">
+        <div class="container-fluid">
+            <h1 class="navbar__nomempresa">TEI: Proyectos Eléctricos</h1>
+            <a class="navbar-brand navbar__logo" href="/home">
+                <img src="/assets/img/logo.jpg" alt="Logo" width="120" height="50" class="d-inline-block align-text-top navbar__imglogo">
+            </a>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar--menu">
+        <div class="container-fluid">
+            <div class=""></div>
+            <a class="btn navbar__btnvolver" href="/landing">Volver</a>
+        </div>
+    </nav>
+</header>
+<div class="main">
+    <section>
+        <img src="/assets/img/login.jpg" class="img-fluid portada__img" alt="Portada para login">
+    </section>
+    <section class="section__formulario">
+        <form class="form_grupo" #loginForm="ngForm">
+            <p class="form__titulo">ACCESO</p>
+            <div class="form__bloque">
+                <p class="form__texto">
+                    Usuario
+                    <span> *</span>
+                </p>
+                <input type="text" name="usuario" id="usuario" class="form-control form__campo" required [(ngModel)]="modeloUsuario.nombreUsuario">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoUsuario">Campo inválido</p>
+                <p class="form__texto">
+                    Contraseña
+                    <span> *</span>
+                </p>
+                <input type="password" name="contrasenia" id="contrasenia" class="form-control form__campo" required [(ngModel)]="modeloUsuario.contrasenia">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoContrasenia">Campo inválido</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary form__btn" type="button" (click)="ingresarIntranet()">ACCEDER</button>
+                </div>
+            </div>
+        </form>
+    </section>
+</div>
