@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeLandingComponent } from './landing/homelanding/homelanding.component';
-import { SugerenciasComponent } from './gestion/sugerencias/sugerencias.component';
+import { SugerenciaComponent } from './gestion/sugerencia/sugerencia.component';
 import { ProveedorComponent } from './logistica/proveedor/proveedor.component';
 import { InventarioComponent } from './logistica/inventario/inventario.component';
 import { ProyectoComponent } from './operaciones/proyecto/proyecto.component';
@@ -13,7 +13,7 @@ import { HomeInicioComponent } from './inicio/homeinicio/homeinicio.component';
 export const routes: Routes = [
     { path: '', redirectTo: '/landing', pathMatch: 'full'},
     { path: 'landing', component: HomeLandingComponent},
-    { path: 'sugerencia', component: SugerenciasComponent},
+    { path: 'sugerencia', component: SugerenciaComponent},
     { path: 'proveedor', component: ProveedorComponent},
     { path: 'inventario', component: InventarioComponent},
     { path: 'proyecto', component: ProyectoComponent},

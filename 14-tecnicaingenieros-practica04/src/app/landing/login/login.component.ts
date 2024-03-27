@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common'; //para usar directivas
 import { FormsModule } from '@angular/forms';
 import { Usuario } from './usuario';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
+import 'sweetalert2/src/sweetalert2.scss';
 
 @Component({
   selector: 'app-login',
@@ -40,14 +42,26 @@ export class LoginComponent {
 
     if(!this.modeloUsuario.nombreUsuario){
       this.hiddenCampoUsuario = false;
-      alert("Brinde su nombre de usuario");
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Brinde su nombre de usuario"
+      });
       rpsta = false;
     }else if(!this.modeloUsuario.contrasenia){
       this.hiddenCampoContrasenia = false;
-      alert("Brinde su contraseña");
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Brinde su contraseña"
+      });
       rpsta = false;
     }else if(!usuarioEncontrado){
-      alert("Datos inválidos, usuario no encontrado");
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Datos inválidos, usuario no encontrado"
+      });
       rpsta = false;
     }
     return rpsta;
