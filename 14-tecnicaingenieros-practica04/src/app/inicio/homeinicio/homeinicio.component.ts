@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CabeceraComponent } from '../../util/cabecera/cabecera.component';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-homeinicio',
@@ -8,6 +9,17 @@ import { CabeceraComponent } from '../../util/cabecera/cabecera.component';
   templateUrl: './homeinicio.component.html',
   styleUrl: './homeinicio.component.css'
 })
-export class HomeInicioComponent {
+export class HomeInicioComponent implements OnInit{
   
+  ngOnInit(): void {
+    this.darBienvenida();
+  }
+
+  darBienvenida(){
+    Swal.fire({
+      icon: "info",
+      title: "Información",
+      text: "Bienvenido al sistema"
+    });
+  }
 }
