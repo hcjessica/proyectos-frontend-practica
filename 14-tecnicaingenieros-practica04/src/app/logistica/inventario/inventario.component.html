@@ -1,1 +1,66 @@
-<p>inventario works!</p>
+<app-cabecera></app-cabecera>
+<div class="main">
+    <section>
+        <img src="/assets/img/inventario.jpg" class="img-fluid portada__img" alt="Portada para inventario">
+    </section>
+    <p class="lema">Inventario</p>
+    <section class="section__formulario" [hidden]="hiddenForm">
+        <a class="btn inventario__boton" (click)="cancelarRegistro()"  [hidden]="hiddenBtnCancelar">CANCELAR</a>
+        <form class="form_grupo" #inventarioForm="ngForm">
+            <p class="form__titulo">REGISTRO</p>
+            <div class="form__bloque">
+                <p class="form__texto">
+                    Id
+                    <span> *</span>
+                </p>
+                <input type="number" name="id" id="id" class="form-control form__campo" readonly disabled required [(ngModel)]="modeloInsumo.id">
+                <p class="form__texto">
+                    Descripción
+                    <span> *</span>
+                </p>
+                <input type="text" name="descripcion" id="descripcion" class="form-control form__campo" required [(ngModel)]="modeloInsumo.descripcion">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoDescripcion">Campo inválido</p>
+                <p class="form__texto">
+                    Stock
+                    <span> *</span>
+                </p>
+                <input type="number" name="stock" id="stock" min="1" class="form-control form__campo" [(ngModel)]="modeloInsumo.stock">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoStock">Campo inválido</p>
+                <p class="form__texto">
+                    Unidad de Medida
+                    <span> *</span>
+                </p>
+                <select class="form-select form__campo" name="umedida" id="umedida" required [(ngModel)]="modeloInsumo.idUnidadMedida">
+                    <option *ngFor="let umedida of arrayUMedida | keyvalue" [value]="umedida.key">{{umedida.value}}</option>
+                </select>
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoUnidadMedida">Campo inválido</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary form__btn" type="button" (click)="guardarInsumo()">GUARDAR</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="section__inventario">
+        <a class="btn inventario__boton" (click)="crearInsumo()"  [hidden]="hiddenBtnCrear">CREAR</a>
+        <div class="inventario__contenedorTabla" [hidden]="hiddenTablaInventario">
+            <table class="table table-hover table-light table-bordered inventario__tabla" id="tablainventario">
+                <thead>
+                    <tr>
+                        <th class="inventario__cabecera">Id</th>
+                        <th class="inventario__cabecera">Descripción</th>
+                        <th class="inventario__cabecera">Stock</th>
+                        <th class="inventario__cabecera">U. Medida</th>
+                    </tr>
+                </thead>
+                <tbody #tbodyInventario id="tbodyInventario">
+                    <tr *ngFor="let insumo of insumos"><!--form reactivo-->
+                        <td>{{insumo.id}}</td>
+                        <td>{{insumo.descripcion}}</td>
+                        <td>{{insumo.stock}}</td>
+                        <td *ngIf="insumo.idUnidadMedida !== undefined">{{arrayUMedida[insumo.idUnidadMedida]}}</td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>

@@ -1,1 +1,62 @@
-<p>cliente works!</p>
+<app-cabecera></app-cabecera>
+<div class="main">
+    <section>
+        <img src="/assets/img/cliente.jpeg" class="img-fluid portada__img" alt="Portada para cliente">
+    </section>
+    <p class="lema">Clientes</p>
+    <section class="section__formulario" [hidden]="hiddenForm">
+        <a class="btn clientes__boton" (click)="cancelarRegistro()" [hidden]="hiddenBtnCancelar">CANCELAR</a>
+        <form class="form_grupo" #clienteForm="ngForm">
+            <p class="form__titulo">REGISTRO</p>
+            <div class="form__bloque">
+                <p class="form__texto">
+                    Id
+                    <span> *</span>
+                </p>
+                <input type="number" name="id" id="id" class="form-control form__campo" readonly disabled required [(ngModel)]="modeloCliente.id">
+                <p class="form__texto">
+                    Nombre
+                    <span> *</span>
+                </p>
+                <input type="text" name="nombre" id="nombre" class="form-control form__campo" required [(ngModel)]="modeloCliente.nombre">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoNombre">Campo inválido</p>
+                <p class="form__texto">
+                    RUC
+                    <span> *</span>
+                </p>
+                <input type="text" name="ruc" id="ruc" class="form-control form__campo" required [(ngModel)]="modeloCliente.ruc">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoRUC">Campo inválido</p>
+                <p class="form__texto">
+                    Dirección
+                </p>
+                <input type="text" name="direccion" id="direccion" class="form-control form__campo" [(ngModel)]="modeloCliente.direccion">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary form__btn" type="button" (click)="guardarCliente()">GUARDAR</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="section__clientes">
+        <a class="btn clientes__boton" (click)="crearCliente()"  [hidden]="hiddenBtnCrear">CREAR</a>
+        <div class="clientes__contenedorTabla" [hidden]="hiddenTablaClientes">
+            <table class="table table-hover table-light table-bordered clientes__tabla" id="tablacliente">
+                <thead>
+                    <tr>
+                        <th class="clientes__cabecera">Id</th>
+                        <th class="clientes__cabecera">Nombre</th>
+                        <th class="clientes__cabecera">RUC</th>
+                        <th class="clientes__cabecera">Dirección</th>
+                    </tr>
+                </thead>
+                <tbody #tbodyCliente id="tbodyCliente">
+                    <tr *ngFor="let cliente of clientes"><!--form reactivo-->
+                        <td>{{cliente.id}}</td>
+                        <td>{{cliente.nombre}}</td>
+                        <td>{{cliente.ruc}}</td>
+                        <td>{{cliente.direccion}}</td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>

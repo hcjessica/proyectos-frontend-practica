@@ -2,6 +2,14 @@
     width: 100%;
     max-height: 685.5px;
 }
+.lema{
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+    font-size: 3.2rem;
+    text-align: center;
+    color: #16204c;
+}
 .section__proveedores{
     display: flex;
     flex-direction: column;
