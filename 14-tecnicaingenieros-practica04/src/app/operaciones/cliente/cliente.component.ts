@@ -24,10 +24,10 @@ export class ClienteComponent {
   hiddenCampoRUC = true;
 
   clientes: Cliente[] = [
-    {id: 1, nombre: "Sunati" , ruc: "10459624301", direccion: "Av. Prolongación 233"},
-    {id: 2, nombre: "PetroPeruvian" , ruc: "20123456789", direccion: "Av. Arequipa 100"},
-    {id: 3, nombre: "Cencosad" , ruc: "20600444440", direccion: "Av. Luren 500"},
-    {id: 4, nombre: "Luxelux" , ruc: "10450286321", direccion: "Av. Brasil 640"},
+    {id: 1, nombre: "SUNATI" , ruc: "10459624301", direccion: "Av. PROLONGACIÓN 233"},
+    {id: 2, nombre: "PETROPERUVIAN" , ruc: "20123456789", direccion: "Av. AREQUIPA 100"},
+    {id: 3, nombre: "CENCOSAD" , ruc: "20600444440", direccion: "Av. LUREN 500"},
+    {id: 4, nombre: "LUBELUXE" , ruc: "10450286321", direccion: "Av. BRASIL 640"},
   ];
 
   crearCliente(){

@@ -1,1 +1,86 @@
-<p>proyecto works!</p>
+<app-cabecera></app-cabecera>
+<div class="main">
+    <section>
+        <img src="/assets/img/proyecto.jpeg" class="img-fluid portada__img" alt="Portada para proyecto">
+    </section>
+    <p class="lema">Proyectos</p>
+    <section class="section__formulario" [hidden]="hiddenForm">
+        <a class="btn proyectos__boton" (click)="cancelarRegistro()" [hidden]="hiddenBtnCancelar">CANCELAR</a>
+        <form class="form_grupo" #proyectoForm="ngForm">
+            <p class="form__titulo">REGISTRO</p>
+            <div class="form__bloque">
+                <p class="form__texto">
+                    Id
+                    <span> *</span>
+                </p>
+                <input type="number" name="id" id="id" class="form-control form__campo" readonly disabled required [(ngModel)]="modeloProyecto.id">
+                <p class="form__texto">
+                    Código
+                    <span> *</span>
+                </p>
+                <input type="text" name="codigo" id="codigo" class="form-control form__campo" required [(ngModel)]="modeloProyecto.codigo">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoCodigo">Campo inválido</p>
+                <p class="form__texto">
+                    Descripción
+                    <span> *</span>
+                </p>
+                <input type="text" name="descripcion" id="descripcion" class="form-control form__campo" required [(ngModel)]="modeloProyecto.descripcion">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoDescripcion">Campo inválido</p>
+                <p class="form__texto">
+                    Tipo de Proyecto
+                    <span> *</span>
+                </p>
+                <select class="form-select form__campo" name="tipoproyecto" id="tipoproyecto" required [(ngModel)]="modeloProyecto.idTipoProyecto">
+                    <option *ngFor="let tproyecto of arrayTipoProyecto | keyvalue" [value]="tproyecto.key">{{tproyecto.value}}</option>
+                </select>
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoTProyecto">Campo inválido</p>
+                <p class="form__texto">
+                    Status de Proyecto
+                    <span> *</span>
+                </p>
+                <select class="form-select form__campo" name="statusproyecto" id="statusproyecto" required [(ngModel)]="modeloProyecto.idStatus">
+                    <option *ngFor="let sproyecto of arrayStatusProyecto | keyvalue" [value]="sproyecto.key">{{sproyecto.value}}</option>
+                </select>
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoSProyecto">Campo inválido</p>
+                <p class="form__texto">
+                    Cliente
+                    <span> *</span>
+                </p>
+                <select class="form-select form__campo" name="cliente" id="cliente" required [(ngModel)]="modeloProyecto.idCliente">
+                    <option *ngFor="let cliente of arrayCliente | keyvalue" [value]="cliente.key">{{cliente.value}}</option>
+                </select>
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoCliente">Campo inválido</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary form__btn" type="button" (click)="guardarProyecto()">GUARDAR</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="section__proyectos">
+        <a class="btn proyectos__boton" (click)="crearProyecto()"  [hidden]="hiddenBtnCrear">CREAR</a>
+        <div class="proyectos__contenedorTabla" [hidden]="hiddenTablaProyectos">
+            <table class="table table-hover table-light table-bordered proyectos__tabla" id="tablaproyecto">
+                <thead>
+                    <tr>
+                        <th class="proyectos__cabecera">Id</th>
+                        <th class="proyectos__cabecera">Código</th>
+                        <th class="proyectos__cabecera">Descripción</th>
+                        <th class="proyectos__cabecera">Tipo Proyecto</th>
+                        <th class="proyectos__cabecera">Status</th>
+                        <th class="proyectos__cabecera">Cliente</th>
+                    </tr>
+                </thead>
+                <tbody #tbodyProyecto id="tbodyProyecto">
+                    <tr *ngFor="let proyecto of proyectos"><!--form reactivo-->
+                        <td>{{proyecto.id}}</td>
+                        <td>{{proyecto.codigo}}</td>
+                        <td>{{proyecto.descripcion}}</td>
+                        <td *ngIf="proyecto.idTipoProyecto !== undefined">{{arrayTipoProyecto[proyecto.idTipoProyecto]}}</td>
+                        <td *ngIf="proyecto.idStatus !== undefined">{{arrayStatusProyecto[proyecto.idStatus]}}</td>
+                        <td *ngIf="proyecto.idCliente !== undefined">{{arrayCliente[proyecto.idCliente]}}</td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>

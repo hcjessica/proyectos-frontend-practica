@@ -26,8 +26,8 @@ export class ProveedorComponent {
   hiddenCampoSitioWeb = true;
 
   proveedores: Proveedor[] = [
-    {id: 1, nombre: "Electro Sur S.R.L.", direccion: "Cercado de Lima #233", telefono: "3658800", correo: "logistica@electrosur.com", sitioweb: "https://www.electrosur.com"},
-    {id: 2, nombre: "Instrumentos S.A.C", direccion: "Lince #100", telefono: "2537114", correo: "logistica@instrumentos.com", sitioweb: "https://www.instrumentos.com"},
+    {id: 1, nombre: "ELECTRO SUR S.R.L.", direccion: "CERCADO DE LIMA #233", telefono: "3658800", correo: "logistica@electrosur.com", sitioweb: "https://www.electrosur.com"},
+    {id: 2, nombre: "INSTRUMENTOS S.A.C", direccion: "LINCE #100", telefono: "2537114", correo: "logistica@instrumentos.com", sitioweb: "https://www.instrumentos.com"},
   ];
 
   crearProveedor(){
