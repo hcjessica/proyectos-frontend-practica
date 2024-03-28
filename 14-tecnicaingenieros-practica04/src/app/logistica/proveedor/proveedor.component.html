@@ -1,1 +1,76 @@
-<p>proveedor works!</p>
+<app-cabecera></app-cabecera>
+<div class="main">
+    <section>
+        <img src="/assets/img/proveedor.jpg" class="img-fluid portada__img" alt="Portada para proveedor">
+    </section>
+    <p class="lema">Proveedores</p>
+    <section class="section__formulario" [hidden]="hiddenForm">
+        <a class="btn proveedores__boton" (click)="cancelarRegistro()"  [hidden]="hiddenBtnCancelar">CANCELAR</a>
+        <form class="form_grupo" #proveedorForm="ngForm">
+            <p class="form__titulo">REGISTRO</p>
+            <div class="form__bloque">
+                <p class="form__texto">
+                    Id
+                    <span> *</span>
+                </p>
+                <input type="number" name="id" id="id" class="form-control form__campo" readonly disabled required [(ngModel)]="modeloProveedor.id">
+                <p class="form__texto">
+                    Nombre
+                    <span> *</span>
+                </p>
+                <input type="text" name="nombre" id="nombre" class="form-control form__campo" required [(ngModel)]="modeloProveedor.nombre">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoNombre">Campo inválido</p>
+                <p class="form__texto">
+                    Dirección
+                </p>
+                <input type="text" name="direccion" id="direccion" class="form-control form__campo" [(ngModel)]="modeloProveedor.direccion">
+                <p class="form__texto">
+                    Teléfono
+                    <span> *</span>
+                </p>
+                <input type="number" name="telefono" id="telefono" class="form-control form__campo" maxlength="9" required [(ngModel)]="modeloProveedor.telefono">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoTelefono">Campo inválido</p>
+                <p class="form__texto">
+                    Correo
+                </p>
+                <input type="email" name="correo" id="correo" class="form-control form__campo form__campo-correoelectronico" [(ngModel)]="modeloProveedor.correo">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoCorreo">Campo inválido</p>
+                <p class="form__texto">
+                    Sitio Web
+                </p>
+                <input type="text" name="sitioweb" id="sitioweb" class="form-control form__campo form__campo-sitioweb" [(ngModel)]="modeloProveedor.sitioweb">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoSitioWeb">Campo inválido</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary form__btn" type="button" (click)="guardarProveedor()">GUARDAR</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="section__proveedores">
+        <a class="btn proveedores__boton" (click)="crearProveedor()"  [hidden]="hiddenBtnCrear">CREAR</a>
+        <div class="proveedores__contenedorTabla" [hidden]="hiddenTablaProveedores">
+            <table class="table table-hover table-light table-bordered proveedores__tabla" id="tablaproveedor">
+                <thead>
+                    <tr>
+                        <th class="proveedores__cabecera">Id</th>
+                        <th class="proveedores__cabecera">Nombre</th>
+                        <th class="proveedores__cabecera">Dirección</th>
+                        <th class="proveedores__cabecera">Telefono</th>
+                        <th class="proveedores__cabecera">Correo</th>
+                        <th class="proveedores__cabecera">Sitio Web</th>
+                    </tr>
+                </thead>
+                <tbody #tbodyProveedor id="tbodyProveedor">
+                    <tr *ngFor="let proveedor of proveedores"><!--form reactivo-->
+                        <td>{{proveedor.id}}</td>
+                        <td>{{proveedor.nombre}}</td>
+                        <td>{{proveedor.direccion}}</td>
+                        <td>{{proveedor.telefono}}</td>
+                        <td>{{proveedor.correo}}</td>
+                        <td>{{proveedor.sitioweb}}</td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>

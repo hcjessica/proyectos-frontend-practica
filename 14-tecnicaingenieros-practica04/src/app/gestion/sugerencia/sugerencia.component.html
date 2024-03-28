@@ -1,1 +1,56 @@
-<p>sugerencias works!</p>
+<app-cabecera></app-cabecera>
+<div class="main">
+    <section>
+        <img src="/assets/img/sugerencia.jpg" class="img-fluid portada__img" alt="Portada para sugerencia">
+    </section>
+    <p class="lema">Sugerencias</p>
+    <section class="section__formulario" [hidden]="hiddenForm">
+        <a class="btn sugerencias__boton" (click)="cancelarRegistro()"  [hidden]="hiddenBtnCancelar">CANCELAR</a>
+        <form class="form_grupo" #sugerenciaForm="ngForm">
+            <p class="form__titulo">REGISTRO</p>
+            <div class="form__bloque">
+                <p class="form__texto">
+                    Id
+                    <span> *</span>
+                </p>
+                <input type="number" name="id" id="id" class="form-control form__campo" readonly disabled required [(ngModel)]="modeloSugerencia.id">
+                <p class="form__texto">
+                    Título
+                    <span> *</span>
+                </p>
+                <input type="text" name="titulo" id="titulo" class="form-control form__campo" required [(ngModel)]="modeloSugerencia.titulo">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoTitulo">Campo inválido</p>
+                <p class="form__texto">
+                    Descripción
+                    <span> *</span>
+                </p>
+                <input type="text" name="descripcion" id="descripcion" class="form-control form__campo" required [(ngModel)]="modeloSugerencia.descripcion">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoDescripcion">Campo inválido</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary form__btn" type="button" (click)="guardarSugerencia()">GUARDAR</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="section__sugerencias">
+        <a class="btn sugerencias__boton" (click)="crearSugerencia()"  [hidden]="hiddenBtnCrear">CREAR</a>
+        <div class="sugerencias__contenedorTabla" [hidden]="hiddenTablaSugerencias">
+            <table class="table table-hover table-light table-bordered sugerencias__tabla" id="tablasugerencia">
+                <thead>
+                    <tr>
+                        <th class="sugerencias__cabecera">Id</th>
+                        <th class="sugerencias__cabecera">Título</th>
+                        <th class="sugerencias__cabecera">Descripción</th>
+                    </tr>
+                </thead>
+                <tbody #tbodySugerencia id="tbodySugerencia">
+                    <tr *ngFor="let sugerencia of sugerencias"><!--form reactivo-->
+                        <td>{{sugerencia.id}}</td>
+                        <td>{{sugerencia.titulo}}</td>
+                        <td>{{sugerencia.descripcion}}</td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
