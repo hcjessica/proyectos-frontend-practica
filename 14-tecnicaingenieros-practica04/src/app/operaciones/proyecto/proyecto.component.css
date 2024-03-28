@@ -1,0 +1,124 @@
+.portada__img{
+    width: 100%;
+    max-height: 685.5px;
+}
+.lema{
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+    font-size: 3.2rem;
+    text-align: center;
+    color: #16204c;
+}
+.section__proyectos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+}
+.proyectos__boton{
+    margin-top: 3rem;
+    padding: 10px 12px;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: none;
+    background-color: #1b76c3;
+    color: white;
+}
+.proyectos__boton:hover,.proyectos__boton:active,.proyectos__boton:focus,.proyectos__boton:visited{
+    background-color: #17161a;    
+}
+.proyectos__contenedorTabla{
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    width: 100%;
+}
+.proyectos__tabla{
+    margin-top: 32px;
+    width: max-content;
+}
+th.proyectos__cabecera{
+    background-color: #17161a;
+    color: white;
+}
+th,td{
+    font-size: 1.7rem;
+    text-align: center;
+}
+/*form registro*/
+.section__formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.form_grupo{
+    margin-top: 3rem;
+    width: 408px;
+}
+.form__titulo{
+    margin: 0;
+    padding: 1.2rem 0.5rem;
+    font-family: sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    background-color: #1b76c3;
+    color: white;
+}
+.form__bloque{
+    padding: 1.6rem 2rem;
+    border: 1px solid #1b76c3;
+    border-radius: 0 0 10px 10px;
+}
+.form__texto{
+    font-family: sans-serif;
+    font-size: 1.6rem;
+}
+.form__texto span {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    color: red;
+}
+.form__campo{
+    margin-bottom: 16px;
+    padding: 10px 0;
+    font-size: 1.6rem;
+    color: #0021d7;
+    border: 0.1rem solid #36323245;
+    text-transform: uppercase;
+}
+.form__campo:focus{
+    color: #0021d7;
+}
+.form__campo > option{
+    font-size: 1.6rem;
+}
+.form__btn{
+    margin-top: 1.5rem;
+    padding: 10px 0;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background-color: #1b76c3;
+    color: white;
+    border: none;
+}
+button.form__btn:hover, button.form__btn:active, button.form__btn:focus, button.form__btn:visited{
+    background-color: #17161a !important;
+    color: white;
+}
+.form__texto-alerta{
+    font-weight: bold;
+    color: red;
+    text-align: start;
+    margin-top: 12px;
+    line-height: 20px;
+    font-size: 1.4rem;
+}
