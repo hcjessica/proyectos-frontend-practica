@@ -1,1 +1,106 @@
-<p>reqinsumos works!</p>
+<app-cabecera></app-cabecera>
+<div class="main">
+    <section>
+        <img src="/assets/img/reqinsumo.jpg" class="img-fluid portada__img" alt="Portada para req. de insumo">
+    </section>
+    <p class="lema">Requerimientos de Insumos</p>
+    <section class="section__formulario" [hidden]="hiddenForm">
+        <a class="btn reqinsumos__boton" (click)="cancelarRegistro()"  [hidden]="hiddenBtnCancelar">CANCELAR</a>
+        <form class="form_grupo" #cursoForm="ngForm">
+            <p class="form__titulo">REGISTRO</p>
+            <div class="form__bloque">
+                <p class="form__texto">
+                    Id
+                    <span> *</span>
+                </p>
+                <input type="number" name="id" id="id" class="form-control form__campo" readonly disabled required [(ngModel)]="modeloReqInsumo.id">
+                <p class="form__texto">
+                    Proyecto
+                    <span> *</span>
+                </p>
+                <select class="form-select form__campo" name="proyecto" id="proyecto" #campoProyecto required [(ngModel)]="modeloReqInsumo.idProyecto" (change)="obtenerDatosProyecto()">
+                    <option *ngFor="let proyecto of proyectos" [value]="proyecto.id">{{proyecto.descripcion}}</option>
+                </select>
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoProyecto">Campo inválido</p>
+                <!--Datos de proyecto-->
+                <p class="form__texto">
+                    Cód. Proyecto
+                </p>
+                <input type="text" name="codproyecto" id="codproyecto" class="form-control form__campo" disabled readonly [value]="codproyecto">
+                <p class="form__texto">
+                    Descrip. Proyecto
+                </p>
+                <input type="text" name="descripproyecto" id="descripproyecto" class="form-control form__campo" disabled readonly [value]="descripproyecto">
+                <p class="form__texto">
+                    Nombre del cliente
+                </p>
+                <input type="text" name="nomcliente" id="nomcliente" class="form-control form__campo" disabled readonly [value]="nomcliente">
+                <!---->
+                <!--Datos del req.-->
+                <p class="form__texto">
+                    Fecha de entrega
+                    <span> *</span>
+                </p>
+                <input type="date" name="fecentrega" id="fecentrega" class="form-control form__campo" required [(ngModel)]="modeloReqInsumo.fechaEntrega">
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoFecEntrega">Campo inválido</p>
+                <p class="form__texto">
+                    Nivel de urgencia
+                    <span> *</span>
+                </p>
+                <select class="form-select form__campo" name="nivelurgencia" id="nivelurgencia" required [(ngModel)]="modeloReqInsumo.idNivelUrgencia">
+                    <option *ngFor="let nurgencia of arrayNivelUrgencia | keyvalue" [value]="nurgencia.key">{{nurgencia.value}}</option>
+                </select>
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoNUrgencia">Campo inválido</p>
+                <p class="form__texto">
+                    Insumo
+                    <span> *</span>
+                </p>
+                <select class="form-select form__campo" name="insumo" id="insumo" required [(ngModel)]="modeloReqInsumo.idInsumo">
+                    <option *ngFor="let insumo of insumos" [value]="insumo.id">{{insumo.descripcion}}</option>
+                </select>
+                <p class="form__texto form__texto-alerta" [hidden]="hiddenCampoInsumo">Campo inválido</p>
+                <p class="form__texto">
+                    Comentarios
+                </p>
+                <textarea class="form-control form__campo" name="comentarios" id="comentarios" cols="10" rows="3" [(ngModel)]="modeloReqInsumo.Comentarios"></textarea>
+                <!---->
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary form__btn" type="button" (click)="guardarReqInsumos()">GUARDAR</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="section__reqinsumos">
+        <a class="btn reqinsumos__boton" (click)="crearReqInsumo()"  [hidden]="hiddenBtnCrear">CREAR</a>
+        <div class="reqinsumos__contenedorTabla" [hidden]="hiddenTablaReqInsumos">
+            <table class="table table-hover table-light table-bordered reqinsumos__tabla" id="tablareqinsumo">
+                <thead>
+                    <tr>
+                        <th class="reqinsumos__cabecera">Id</th>
+                        <th class="reqinsumos__cabecera">Código proyecto</th>
+                        <th class="reqinsumos__cabecera">Proyecto</th>
+                        <th class="reqinsumos__cabecera">Cliente</th>
+                        <th class="reqinsumos__cabecera">Fec. de entrega</th>
+                        <th class="reqinsumos__cabecera">Nivel urgencia</th>
+                        <th class="reqinsumos__cabecera">Insumo</th>
+                        <th class="reqinsumos__cabecera">Comentarios</th>
+                    </tr>
+                </thead>
+                <tbody #tbodyReqInsumos id="tbodyReqInsumos">
+                    <tr *ngFor="let reqinsumo of reqinsumos"><!--form reactivo-->
+                        <td>{{reqinsumo.id}}</td>
+                        <td *ngIf="reqinsumo.idProyecto !== undefined">{{proyectos[reqinsumo.idProyecto - 1].codigo}}</td>
+                        <td *ngIf="reqinsumo.idProyecto !== undefined">{{proyectos[reqinsumo.idProyecto - 1].descripcion}}</td>
+                        <td *ngIf="reqinsumo.idProyecto !== undefined">
+                            {{  obtenerNomCliente(proyectos[reqinsumo.idProyecto - 1].idCliente) }}
+                        </td>
+                        <td>{{reqinsumo.fechaEntrega}}</td>
+                        <td *ngIf="reqinsumo.idNivelUrgencia !== undefined">{{arrayNivelUrgencia[reqinsumo.idNivelUrgencia]}}</td>
+                        <td *ngIf="reqinsumo.idInsumo !== undefined">{{insumos[reqinsumo.idInsumo - 1 ].descripcion}}</td>
+                        <td>{{reqinsumo.Comentarios}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>

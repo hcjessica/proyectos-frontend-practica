@@ -19,7 +19,7 @@ export class LoginComponent {
 
   hiddenCampoUsuario = true;
   hiddenCampoContrasenia = true;
-  modeloUsuario = new Usuario();
+  modeloUsuario = new Usuario("fhuancollo", "fhuancollo");
 
   usuarios: Usuario[] = [
     {id: 1, nombreUsuario: "fhuancollo", contrasenia: "fhuancollo"},
