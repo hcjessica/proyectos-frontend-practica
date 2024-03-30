@@ -82,6 +82,18 @@ Design of a landing using Bootstrap and Flexbox
 
 ## 12. Landing about a business: "Veterinaria of CJava" 
 
-Design of a landing using Bootstrap and Flexbox and JS. This is a practice and It's very similar to project 11.
+Design of a landing using Angular, Bootstrap and Flexbox and JS. This is a practice and It's very similar to project 11.
 
-![Project 11](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project12-1.png)
+![Project 12](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project12-1.png)
+
+## 13. Landing about a business: "Courses of CJava" 
+
+Design of a landing using Angular, Bootstrap and Flexbox and JS. This is a practice and It's very similar to project 12.
+
+![Project 13](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project13-1.png)
+
+## 14. Landing about a business: "Electrical works  of TEI" 
+
+Design of a landing using Angular, Bootstrap and Flexbox and JS. This is a practice and It's very similar to project 13.
+
+![Project 14](https://raw.githubusercontent.com/hcjessica/proyectos-frontend-practica/master/assets/Project14-1.png)
