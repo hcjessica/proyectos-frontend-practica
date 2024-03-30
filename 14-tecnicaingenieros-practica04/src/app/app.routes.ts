@@ -6,7 +6,6 @@ import { InventarioComponent } from './logistica/inventario/inventario.component
 import { ProyectoComponent } from './operaciones/proyecto/proyecto.component';
 import { ClienteComponent } from './operaciones/cliente/cliente.component';
 import { ReqinsumosComponent } from './operaciones/reqinsumos/reqinsumos.component';
-import { CtrlpersonalComponent } from './operaciones/ctrlpersonal/ctrlpersonal.component';
 import { LoginComponent } from './landing/login/login.component';
 import { HomeInicioComponent } from './inicio/homeinicio/homeinicio.component';
 
@@ -19,7 +18,6 @@ export const routes: Routes = [
     { path: 'proyecto', component: ProyectoComponent},
     { path: 'cliente', component: ClienteComponent},
     { path: 'reqinsumos', component: ReqinsumosComponent},
-    { path: 'ctrlpersonal', component: CtrlpersonalComponent},
     { path: 'login', component: LoginComponent},
     { path: 'inicio', component: HomeInicioComponent},
 ];
